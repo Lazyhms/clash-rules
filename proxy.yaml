@@ -64,7 +64,7 @@ proxy-groups:
     proxies:
       - DIRECT
     use:
-      - NODE
+      - PROXY
 rule-providers:
   reject:
     type: http
