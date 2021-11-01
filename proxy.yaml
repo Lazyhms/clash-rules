@@ -45,7 +45,7 @@ proxy-providers:
     url: https://www.qunima.cc/clash/proxies
     interval: 3600
     health-check:
-        enable: true
+        enable: false
         url: http://www.gstatic.com/generate_204
         interval: 300
 proxy-groups:
