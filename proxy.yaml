@@ -42,7 +42,7 @@ proxy-providers:
   proxy:
     type: http
     path: ./proxies.yaml
-    url: https://www.qunima.cc/clash/proxies?filter=TW,US,TK
+    url: https://www.qunima.cc/clash/proxies?c=CN,JP,HK,US,TW,AL
     interval: 3600
     health-check:
         enable: false
