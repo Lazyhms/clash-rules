@@ -39,10 +39,10 @@ dns:
     ipcidr:
       - 240.0.0.0/4
 proxy-providers:
-  US:
+  NODE:
     type: http
-    path: ./GsS4ae.yaml
-    url: https://raw.githubusercontent.com/changfengoss/pub/main/data/2021_10_30/GsS4ae.yaml
+    path: ./proxies.yaml
+    url: https://www.qunima.cc/clash/proxies
     interval: 3600
     health-check:
         enable: true
@@ -52,9 +52,19 @@ proxy-groups:
   - name: PROXY
     type: select
     proxies:
+      - AUTO
       - DIRECT
     use:
-      - US
+      - NODE
+- name: AUTO
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - DIRECT
+    use:
+      - NODE
 rule-providers:
   reject:
     type: http
