@@ -36,12 +36,6 @@ dns:
     - https://cloudflare-dns.com/dns-query
   fallback-filter:
     geoip: true
-port: 7890
-socks-port: 7891
-allow-lan: true
-mode: Rule
-log-level: info
-external-controller: 0.0.0.0:9090
 proxies:
   - {name: 'cfmem.com_🇨🇦_CA_加拿大_1', server: 134.195.196.50, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
   - {name: 'cfmem.com_🇦🇺_AU_澳大利亚_1', server: 172.105.172.41, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
