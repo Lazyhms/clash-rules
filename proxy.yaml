@@ -48,6 +48,15 @@ proxy-providers:
         enable: true
         url: http://www.gstatic.com/generate_204
         interval: 300
+  freefq:
+    type: http
+    path: ./proxies/freefq.yaml
+    url: https://subcon.dlj.tf/sub?target=clashr&new_name=true&url=https%3A%2F%2Fraw.fastgit.org%2Ffreefq%2Ffree%2Fmaster%2Fv2&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini
+    interval: 3600
+    health-check:
+        enable: true
+        url: http://www.gstatic.com/generate_204
+        interval: 300
   yktuzg:
     type: http
     path: ./proxies/yktuzg.yaml
@@ -61,18 +70,30 @@ proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - AUTO
-      - DIRECT
-    use:
       - freenode
+      - freefq
       - yktuzg
-  - name: AUTO
+      - DIRECT
+  - name: freenode
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     use:
       - freenode
+  - name: freefq
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - freefq
+  - name: yktuzg
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
       - yktuzg
 rule-providers:
   reject:
