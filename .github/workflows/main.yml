@@ -20,9 +20,9 @@ jobs:
           curl https://subcon.dlj.tf/sub?target=clashr&new_name=true&url=https%3A%2F%2Fraw.fastgit.org%2Ffreefq%2Ffree%2Fmaster%2Fv2&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini > freefq.yaml
           curl https://raw.githubusercontent.com/changfengoss/pub/main/data/2021_11_01/YKtuZG.yaml > yktuzg.yaml
           
-          sed '/^proxies:/,/^proxy-groups:/{//!d}' freenode.yaml  
-          sed '/^proxies:/,/^proxy-groups:/{//!d}' freefq.yaml  
-          sed '/^proxies:/,/^proxy-groups:/{//!d}' yktuzg.yaml  
+          sed -i '/^proxies:/,/^proxy-groups:/{//!d}' freenode.yaml  
+          sed -i '/^proxies:/,/^proxy-groups:/{//!d}' freefq.yaml  
+          sed -i '/^proxies:/,/^proxy-groups:/{//!d}' yktuzg.yaml  
           
       - name: Git push to release
         run: |
@@ -37,7 +37,6 @@ jobs:
           
       - name: Purge jsdelivr cdn
         run: |
-          cd publish || exit 1
           for file in $(ls); do
             curl "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
           done
