@@ -20,8 +20,8 @@ jobs:
           #curl https://subcon.dlj.tf/sub?target=clashr&new_name=true&url=https%3A%2F%2Fraw.fastgit.org%2Ffreefq%2Ffree%2Fmaster%2Fv2&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini > freefq.yaml
           #curl https://raw.githubusercontent.com/changfengoss/pub/main/data/2021_11_01/YKtuZG.yaml > yktuzg.yaml
           
-          freenode_top_column = $(sed -n 'proxies:/=' freenode.yaml)
-          freenode_buttom_column = $(sed -n 'proxy-groups:/=' freenode.yaml)
+          FREENODE_TOP_COLUMN=$(sed -n 'proxies:/=' freenode.yaml)
+          FREENODE_BUTTOM_COLUMN=$(sed -n 'proxy-groups:/=' freenode.yaml)
           #sed -i '${freenode_top_column},${freenode_buttom_column}!d' freenode.yaml
           
           #sed -n 'proxies:/=' freefq.yaml > freefq_top_column
