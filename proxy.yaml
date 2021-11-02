@@ -39,13 +39,22 @@ dns:
     ipcidr:
       - 240.0.0.0/4
 proxy-providers:
-  proxy:
+  freenode:
     type: http
-    path: ./proxies/GsS4ae.yaml
-    url: https://raw.githubusercontent.com/changfengoss/pub/main/data/2021_10_30/GsS4ae.yaml
+    path: ./proxies/freenode.yaml
+    url: https://cdn.jsdelivr.net/gh/oslook/clash-freenode@master/clash.yaml
     interval: 3600
     health-check:
-        enable: false
+        enable: true
+        url: http://www.gstatic.com/generate_204
+        interval: 300
+  yktuzg:
+    type: http
+    path: ./proxies/yktuzg.yaml
+    url: https://raw.githubusercontent.com/changfengoss/pub/main/data/2021_11_01/YKtuZG.yaml
+    interval: 3600
+    health-check:
+        enable: true
         url: http://www.gstatic.com/generate_204
         interval: 300
 proxy-groups:
@@ -55,14 +64,16 @@ proxy-groups:
       - AUTO
       - DIRECT
     use:
-      - proxy
+      - freenode
+      - yktuzg
   - name: AUTO
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     use:
-      - proxy
+      - freenode
+      - yktuzg
 rule-providers:
   reject:
     type: http
