@@ -1,0 +1,54 @@
+name: Clash rules
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 23 * * *"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set variables
+        run: |
+          echo "RELEASE_NAME=Released on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+          echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Generate folder and files
+        run: |
+          curl https://cdn.jsdelivr.net/gh/oslook/clash-freenode@master/clash.yaml > freenode.yaml
+          curl https://subcon.dlj.tf/sub?target=clashr&new_name=true&url=https%3A%2F%2Fraw.fastgit.org%2Ffreefq%2Ffree%2Fmaster%2Fv2&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini > freefq.yaml
+          curl https://raw.githubusercontent.com/changfengoss/pub/main/data/2021_11_01/YKtuZG.yaml > yktuzg.yaml
+          
+          sed -n 'proxies:/=' freenode.yaml > freenode_top_column
+          sed '1,${freenode_top_column}d' freenode.yaml
+          sed -n 'proxy-groups:/=' freenode.yaml > freenode_buttom_column
+          sed '${freenode_buttom_column},$d' freenode.yaml
+          
+          sed -n 'proxies:/=' freefq.yaml > freefq_top_column
+          sed '1,${freefq_top_column}d' freenode.yaml
+          sed -n 'proxy-groups:/=' freefq.yaml > freefq_buttom_column
+          sed '${freefq_buttom_column},$d' freenode.yaml
+                    
+          sed -n 'proxies:/=' yktuzg.yaml > yktuzg_top_column
+          sed '1,${yktuzg_top_column}d' yktuzg.yaml
+          sed -n 'proxy-groups:/=' yktuzg.yaml > yktuzg_buttom_column
+          sed '${yktuzg_buttom_column},$d' yktuzg.yaml
+          
+      - name: Git push to release
+        run: |
+          cd publish || exit 1
+          git init
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b release
+          git add .
+          git commit -m "${{ env.RELEASE_NAME }}"
+          git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git push -f origin release
+          
+      - name: Purge jsdelivr cdn
+        run: |
+          cd publish || exit 1
+          for file in $(ls); do
+            curl "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
+          done
