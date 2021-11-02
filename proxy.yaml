@@ -4,13 +4,13 @@ allow-lan: true
 mode: rule
 log-level: info
 bind-address: "*"
-external-controller: 0.0.0.0:9090
+external-controller: :::9090
 authentication:
   - "hms:2039590"
 dns:
   enable: true
   ipv6: false
-  listen: 0.0.0.0:5450
+  listen: :::5450
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   default-nameserver:
