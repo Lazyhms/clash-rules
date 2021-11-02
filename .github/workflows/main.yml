@@ -20,17 +20,17 @@ jobs:
           curl https://raw.githubusercontent.com/changfengoss/pub/main/data/2021_11_01/YKtuZG.yaml > yktuzg.yaml
           
           sed -n 'proxies:/=' freenode.yaml > freenode_top_column
-          sed '1,${freenode_top_column}d' freenode.yaml
+          sed '1,${freenode_top_column-1}d' freenode.yaml
           sed -n 'proxy-groups:/=' freenode.yaml > freenode_buttom_column
           sed '${freenode_buttom_column},$d' freenode.yaml
           
           sed -n 'proxies:/=' freefq.yaml > freefq_top_column
-          sed '1,${freefq_top_column}d' freenode.yaml
+          sed '1,${freefq_top_column-1}d' freenode.yaml
           sed -n 'proxy-groups:/=' freefq.yaml > freefq_buttom_column
           sed '${freefq_buttom_column},$d' freenode.yaml
                     
           sed -n 'proxies:/=' yktuzg.yaml > yktuzg_top_column
-          sed '1,${yktuzg_top_column}d' yktuzg.yaml
+          sed '1,${yktuzg_top_column-1}d' yktuzg.yaml
           sed -n 'proxy-groups:/=' yktuzg.yaml > yktuzg_buttom_column
           sed '${yktuzg_buttom_column},$d' yktuzg.yaml
           
