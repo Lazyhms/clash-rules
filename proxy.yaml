@@ -42,7 +42,7 @@ proxy-providers:
   freenode:
     type: http
     path: ./proxies/freenode.yaml
-    url: https://cdn.jsdelivr.net/gh/oslook/clash-freenode@master/clash.yaml
+    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/freenode.yaml
     interval: 3600
     health-check:
         enable: true
@@ -51,7 +51,7 @@ proxy-providers:
   freefq:
     type: http
     path: ./proxies/freefq.yaml
-    url: https://subcon.dlj.tf/sub?target=clashr&new_name=true&url=https%3A%2F%2Fraw.fastgit.org%2Ffreefq%2Ffree%2Fmaster%2Fv2&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini
+    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/freefq.yaml
     interval: 3600
     health-check:
         enable: true
@@ -60,7 +60,7 @@ proxy-providers:
   yktuzg:
     type: http
     path: ./proxies/yktuzg.yaml
-    url: https://raw.githubusercontent.com/changfengoss/pub/main/data/2021_11_01/YKtuZG.yaml
+    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/yktuzg.yaml
     interval: 3600
     health-check:
         enable: true
