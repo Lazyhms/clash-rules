@@ -200,5 +200,5 @@ rules:
   - RULE-SET,direct,DIRECT
   - RULE-SET,telegramcidr,PROXY
   - GEOIP,,DIRECT
-  - GEOIP,CN,DIRECT
+  - GEOIP,CN,DIRECT,no-resolve
   - MATCH,PROXY
