@@ -28,9 +28,9 @@ jobs:
           sed -i '$d' freefq.yaml
           sed -i '$d' yktuzg.yaml
           
-          if [ ! -s freenode.txt ] then rm -f freenode.yaml; fi
-          if [ ! -s freefq.txt ] then rm -f freefq.yaml; fi
-          if [ ! -s yktuzg.txt ] then rm -f yktuzg.yaml; fi
+          if [ ! -s freenode.txt ]; then rm -f freenode.yaml fi
+          if [ ! -s freefq.txt ]; then rm -f freefq.yaml fi
+          if [ ! -s yktuzg.txt ]; then rm -f yktuzg.yaml fi
           
       - name: Git push to release
         run: |
