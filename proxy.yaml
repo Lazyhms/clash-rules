@@ -72,6 +72,10 @@ proxy-groups:
     proxies:
       - FREENODE
       - DIRECT
+    use:
+      - freenode
+      - freefq
+      - yktuzg
   - name: FREENODE
     type: url-test
     url: http://www.gstatic.com/generate_204
