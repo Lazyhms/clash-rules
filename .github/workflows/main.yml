@@ -15,9 +15,9 @@ jobs:
 
       - name: Generate folder and files
         run: |
-          curl https://cdn.jsdelivr.net/gh/oslook/clash-freenode@master/clash.yaml > freenode.yaml
-          curl https://subcon.dlj.tf/sub?target=clashr&new_name=true&url=https%3A%2F%2Fraw.fastgit.org%2Ffreefq%2Ffree%2Fmaster%2Fv2&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini > freefq.yaml
-          curl https://raw.githubusercontent.com/changfengoss/pub/main/data/2021_11_01/YKtuZG.yaml > yktuzg.yaml
+          curl https://cdn.jsdelivr.net/gh/oslook/clash-freenode@master/clash.yaml >> freenode.yaml
+          curl https://subcon.dlj.tf/sub?target=clashr&new_name=true&url=https%3A%2F%2Fraw.fastgit.org%2Ffreefq%2Ffree%2Fmaster%2Fv2&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini >> freefq.yaml
+          curl https://raw.githubusercontent.com/changfengoss/pub/main/data/2021_11_01/YKtuZG.yaml >> yktuzg.yaml
           
           sed -n 'proxies:/=' freenode.yaml > freenode_top_column
           sed '1,${freenode_top_column-1}d' freenode.yaml
