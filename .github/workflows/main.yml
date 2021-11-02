@@ -22,7 +22,7 @@ jobs:
           
           freenode_top_column = $(sed -n 'proxies:/=' freenode.yaml)
           freenode_buttom_column = $(sed -n 'proxy-groups:/=' freenode.yaml)
-          sed -i '${freenode_top_column},${freenode_buttom_column}!d' freenode.yaml
+          #sed -i '${freenode_top_column},${freenode_buttom_column}!d' freenode.yaml
           
           #sed -n 'proxies:/=' freefq.yaml > freefq_top_column
           #sed '1,${freefq_top_column}d' freenode.yaml
