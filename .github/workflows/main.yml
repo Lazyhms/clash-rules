@@ -17,7 +17,6 @@ jobs:
         run: |
         
           curl "https://cdn.jsdelivr.net/gh/oslook/clash-freenode@master/clash.yaml" > freenode.yaml
-          curl "https://drive.google.com/uc?export=download&id=1u9bolaXHzUQa4mAcmWaasM5-J-Zx4flY" > freefq.yaml
           curl "https://raw.githubusercontent.com/changfengoss/pub/main/data/2021_11_01/YKtuZG.yaml" > yktuzg.yaml
           
           sed -i '/^proxies:/,/^proxy-groups:/!d' freenode.yaml 
@@ -25,11 +24,9 @@ jobs:
           sed -i '/^proxies:/,/^proxy-groups:/!d' yktuzg.yaml 
           
           sed -i '$d' freenode.yaml
-          sed -i '$d' freefq.yaml
           sed -i '$d' yktuzg.yaml
           
           if [ ! -s freenode.yaml ]; then rm -f freenode.yaml; fi
-          if [ ! -s freefq.yaml ]; then rm -f freefq.yaml; fi
           if [ ! -s yktuzg.yaml ]; then rm -f yktuzg.yaml; fi
           
       - name: Git push to release
