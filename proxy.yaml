@@ -6,6 +6,7 @@ ipv6: true
 log-level: info
 bind-address: "*"
 external-controller: 127.0.0.1:9090
+
 dns:
   enable: true
   ipv6: true
@@ -43,25 +44,17 @@ proxy-providers:
     type: http
     path: ./proxies/freenode.yaml
     url: https://raw.fastgit.org/Lazyhms/clash-rules/release/freenode.yaml
-    interval: 3600
+    interval: 86400
     health-check:
         enable: true
         url: http://www.gstatic.com/generate_204
         interval: 300
-  freefq:
-    type: http
-    path: ./proxies/freefq.yaml
-    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/freefq.yaml
-    interval: 3600
-    health-check:
-        enable: true
-        url: http://www.gstatic.com/generate_204
-        interval: 300
+        
   yktuzg:
     type: http
     path: ./proxies/yktuzg.yaml
     url: https://raw.fastgit.org/Lazyhms/clash-rules/release/yktuzg.yaml
-    interval: 3600
+    interval: 86400
     health-check:
         enable: true
         url: http://www.gstatic.com/generate_204
@@ -75,8 +68,8 @@ proxy-groups:
       - DIRECT
     use:
       - freenode
-      - freefq
       - yktuzg
+      
   - name: FREENODE
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -84,7 +77,6 @@ proxy-groups:
     tolerance: 50
     use:
       - freenode
-      - freefq
       - yktuzg
 
 rule-providers:
