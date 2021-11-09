@@ -150,6 +150,5 @@ rules:
   - RULE-SET,direct,DIRECT
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,telegramcidr,PROXY
-  - GEOIP,,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,PROXY
