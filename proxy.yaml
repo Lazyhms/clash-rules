@@ -108,7 +108,7 @@ proxy-groups:
       - qb3txg
       
 rule-providers:
-   reject:
+  reject:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
