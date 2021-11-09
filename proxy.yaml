@@ -211,8 +211,6 @@ rules
   - DOMAIN,yacd.haishan.me,DIRECT
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
-  - RULE-SET,icloud,DIRECT
-  - RULE-SET,apple,DIRECT
   - RULE-SET,proxy,PROXY
   - RULE-SET,telegramcidr,PROXY
   - GEOIP,CN,DIRECT
