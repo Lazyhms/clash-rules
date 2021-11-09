@@ -209,9 +209,5 @@ rule-providers:
 rules
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,reject,REJECT
-  - RULE-SET,proxy,PROXY
-  - RULE-SET,telegramcidr,PROXY
   - GEOIP,CN,DIRECT
   - MATCH,PROXY
