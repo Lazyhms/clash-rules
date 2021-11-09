@@ -58,6 +58,16 @@ proxy-providers:
         enable: true
         url: http://www.gstatic.com/generate_204
         interval: 300
+        
+  qb3txg:
+    type: http
+    path: ./proxies/qb3txg.yaml
+    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/qb3txg.yaml
+    interval: 86400
+    health-check:
+        enable: true
+        url: http://www.gstatic.com/generate_204
+        interval: 300
 
 proxy-groups:
   - name: PROXY
@@ -82,6 +92,14 @@ proxy-groups:
     tolerance: 50
     use:
       - yktuzg
+  
+  - name: QB3TXG
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - qb3txg
       
 rule-providers:
   reject:
