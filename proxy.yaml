@@ -73,8 +73,9 @@ proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - FREENODE
+      - QB3TXG
       - YKTUZG
+      - FREENODE
       - DIRECT
       
   - name: FREENODE
