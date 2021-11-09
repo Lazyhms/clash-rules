@@ -1,19 +1,21 @@
 port: 7890
 socks-port: 7891
+mixed-port: 7890
 allow-lan: true
 mode: rule
 ipv6: true
 log-level: info
 bind-address: "*"
-external-controller: 0.0.0.0:9090
+external-controller: :9090
 experimental:
   ignore-resolve-fail: true
   
 dns:
   enable: true
   ipv6: true
-  listen: 0.0.0.0:5450
+  listen: :5450
   enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
   default-nameserver:
     - 1.1.1.1
     - 1.2.4.8
@@ -37,6 +39,9 @@ dns:
     - https://cloudflare-dns.com/dns-query
   fallback-filter:
     geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
 
 proxy-providers:
   freenode:
