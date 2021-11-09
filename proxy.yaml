@@ -64,10 +64,8 @@ proxy-groups:
     type: select
     proxies:
       - FREENODE
+      - YKTUZG
       - DIRECT
-    use:
-      - freenode
-      - yktuzg
       
   - name: FREENODE
     type: url-test
@@ -76,8 +74,15 @@ proxy-groups:
     tolerance: 50
     use:
       - freenode
+      
+  - name: YKTUZG
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
       - yktuzg
-
+      
 rule-providers:
   reject:
     type: http
