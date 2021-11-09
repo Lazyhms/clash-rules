@@ -215,7 +215,6 @@ rules:
   - RULE-SET,icloud,DIRECT
   - RULE-SET,apple,DIRECT
   - RULE-SET,proxy,PROXY
-  - RULE-SET,lancidr,DIRECT
   - RULE-SET,telegramcidr,PROXY
   - GEOIP,CN,DIRECT
   - MATCH,PROXY
