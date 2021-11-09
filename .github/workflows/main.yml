@@ -18,16 +18,19 @@ jobs:
         
           curl "https://cdn.jsdelivr.net/gh/oslook/clash-freenode@master/clash.yaml" > freenode.yaml
           curl "https://raw.githubusercontent.com/changfengoss/pub/main/data/2021_11_01/YKtuZG.yaml" > yktuzg.yaml
+          curl "https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Fdrive.google.com%2Fuc%3Fexport%3Ddownload%26id%3D1zkyOrVHDWk9CizlwCoQoWReB_qb3OWhu&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&expand=true&new_name=true" > qb3txg.yaml
           
           sed -i '/^proxies:/,/^proxy-groups:/!d' freenode.yaml 
-          sed -i '/^proxies:/,/^proxy-groups:/!d' freefq.yaml 
+          sed -i '/^proxies:/,/^proxy-groups:/!d' qb3txg.yaml
           sed -i '/^proxies:/,/^proxy-groups:/!d' yktuzg.yaml 
           
           sed -i '$d' freenode.yaml
           sed -i '$d' yktuzg.yaml
+          sed -i '$d' qb3txg.yaml
           
           if [ ! -s freenode.yaml ]; then rm -f freenode.yaml; fi
           if [ ! -s yktuzg.yaml ]; then rm -f yktuzg.yaml; fi
+          if [ ! -s qb3txg.yaml ]; then rm -f qb3txg.yaml; fi
           
       - name: Git push to release
         run: |
