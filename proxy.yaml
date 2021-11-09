@@ -214,7 +214,7 @@ rules:
   - RULE-SET,reject,REJECT
   - RULE-SET,icloud,DIRECT,no-resolve
   - RULE-SET,apple,DIRECT,no-resolve
-  - RULE-SET,google,DIRECT,no-resolve
+  - RULE-SET,google,PROXY,no-resolve
   - RULE-SET,proxy,PROXY
   - RULE-SET,direct,DIRECT,no-resolve
   - RULE-SET,lancidr,DIRECT,no-resolve
