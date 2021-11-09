@@ -217,6 +217,5 @@ rules:
   - RULE-SET,proxy,PROXY
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,telegramcidr,PROXY
-  - GEOIP,,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,PROXY
