@@ -9,7 +9,7 @@ bind-address: "*"
 external-controller: :9090
 experimental:
   ignore-resolve-fail: true
-  
+
 dns:
   enable: true
   ipv6: true
@@ -50,29 +50,29 @@ proxy-providers:
     url: https://raw.fastgit.org/Lazyhms/clash-rules/release/freenode.yaml
     interval: 86400
     health-check:
-        enable: true
-        url: http://www.gstatic.com/generate_204
-        interval: 300
-        
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
   yktuzg:
     type: http
     path: ./proxies/yktuzg.yaml
     url: https://raw.fastgit.org/Lazyhms/clash-rules/release/yktuzg.yaml
     interval: 86400
     health-check:
-        enable: true
-        url: http://www.gstatic.com/generate_204
-        interval: 300
-        
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
   qb3txg:
     type: http
     path: ./proxies/qb3txg.yaml
     url: https://raw.fastgit.org/Lazyhms/clash-rules/release/qb3txg.yaml
     interval: 86400
     health-check:
-        enable: true
-        url: http://www.gstatic.com/generate_204
-        interval: 300
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
 
 proxy-groups:
   - name: PROXY
@@ -82,7 +82,7 @@ proxy-groups:
       - YKTUZG
       - FREENODE
       - DIRECT
-      
+
   - name: FREENODE
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -90,7 +90,7 @@ proxy-groups:
     tolerance: 50
     use:
       - freenode
-      
+
   - name: YKTUZG
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -98,7 +98,7 @@ proxy-groups:
     tolerance: 50
     use:
       - yktuzg
-  
+
   - name: QB3TXG
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -106,7 +106,7 @@ proxy-groups:
     tolerance: 50
     use:
       - qb3txg
-      
+
 rule-providers:
   reject:
     type: http
@@ -205,7 +205,7 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
     path: ./ruleset/applications.yaml
     interval: 86400
-    
+
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
