@@ -26,6 +26,12 @@ dns:
     - 119.29.29.29
     - 208.67.222.222
     - 114.114.114.114
+    - 2620:fe::9
+    - 2402:4e00::
+    - 2400:3200::1
+    - 2a00:5a60::ad1:0ff
+    - 2001:4860:4860::8888
+    - 2606:4700:4700::1111
   nameserver:
     - tls://doh.pub
     - tls://dns.alidns.com
@@ -36,12 +42,14 @@ dns:
     - https://[2400:3200::1]/dns-query
   fallback:
     - tls://dns.google
+    - tls://dns.adguard.com
     - https://dns.google/dns-query
     - https://dns11.quad9.net/dns-query
     - https://doh.opendns.com/dns-query
     - https://dns.adguard.com/dns-query
     - https://cloudflare-dns.com/dns-query
-    - https://[2606:4700:4700::64]/dns-query
+    - https://[2001:4860:4860::64]/dns-query
+    - https://[2606:4700:4700::1111]/dns-query
   fallback-filter:
     geoip: true
     geoip-code: CN
