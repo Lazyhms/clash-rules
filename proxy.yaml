@@ -94,6 +94,8 @@ proxy-providers:
 proxy-groups:
   - name: PROXY
     type: url-test
+    interval: 300
+    tolerance: 50
     proxies:
       - FREENODE
       - QB3TXG
@@ -111,16 +113,12 @@ proxy-groups:
   - name: QB3TXG
     type: select
     url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
     use:
       - qb3txg
 
   - name: QT2GZX
     type: select
     url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
     use:
       - qt2gzx
       
