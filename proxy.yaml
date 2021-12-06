@@ -93,7 +93,7 @@ proxy-providers:
       
   qt2gzx:
     type: http
-    path: ./proxies/qb3txg.yaml
+    path: ./proxies/qt2gzx.yaml
     url: https://raw.fastgit.org/Lazyhms/clash-rules/release/qt2gzx.yaml
     interval: 86400
     health-check:
