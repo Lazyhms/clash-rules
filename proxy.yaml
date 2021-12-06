@@ -93,28 +93,34 @@ proxy-providers:
 
 proxy-groups:
   - name: PROXY
-    type: url-test
-    interval: 300
-    tolerance: 50
+    type: select
     proxies:
       - FREENODE
       - QB3TXG
       - QT2GZX
       - DIRECT
-    url: http://www.gstatic.com/generate_204
 
   - name: FREENODE
-    type: select
+    type: url-test
+    interval: 300
+    tolerance: 50
+    url: http://www.gstatic.com/generate_204
     use:
       - freenode
     
   - name: QB3TXG
-    type: select
+    type: url-test
+    interval: 300
+    tolerance: 50
+    url: http://www.gstatic.com/generate_204
     use:
       - qb3txg
 
   - name: QT2GZX
-    type: select
+    type: url-test
+    interval: 300
+    tolerance: 50
+    url: http://www.gstatic.com/generate_204
     use:
       - qt2gzx
       
