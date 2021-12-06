@@ -101,24 +101,20 @@ proxy-groups:
       - QB3TXG
       - QT2GZX
       - DIRECT
+    url: http://www.gstatic.com/generate_204
 
   - name: FREENODE
     type: select
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
     use:
       - freenode
     
   - name: QB3TXG
     type: select
-    url: http://www.gstatic.com/generate_204
     use:
       - qb3txg
 
   - name: QT2GZX
     type: select
-    url: http://www.gstatic.com/generate_204
     use:
       - qt2gzx
       
