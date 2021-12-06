@@ -90,18 +90,29 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+      
+  qt2gzx:
+    type: http
+    path: ./proxies/qb3txg.yaml
+    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/qt2gzx.yaml
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
 
 proxy-groups:
   - name: PROXY
-    type: select
+    type: url-test
     proxies:
       - QB3TXG
       - YKTUZG
       - FREENODE
+      - QT2GZX
       - DIRECT
 
   - name: FREENODE
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -109,7 +120,7 @@ proxy-groups:
       - freenode
 
   - name: YKTUZG
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -117,13 +128,21 @@ proxy-groups:
       - yktuzg
 
   - name: QB3TXG
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     use:
       - qb3txg
 
+  - name: QT2GZX
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - qt2gzx
+      
 rule-providers:
   reject:
     type: http
