@@ -76,8 +76,6 @@ proxy-groups:
     type: select
     proxies:
       - FREENODE
-      - QB3TXG
-      - QT2GZX
       - DIRECT
     use:
       - freenode
