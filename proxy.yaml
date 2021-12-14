@@ -98,7 +98,7 @@ proxy-groups:
     tolerance: 50
     url: http://www.gstatic.com/generate_204
     use:
-      - twnode
+      - freenode
       
   - name: TWNODE
     type: url-test
@@ -106,7 +106,7 @@ proxy-groups:
     tolerance: 50
     url: http://www.gstatic.com/generate_204
     use:
-      - freenode
+      - twnode
   
 rule-providers:
   reject:
