@@ -71,10 +71,10 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
       
-  twnode:
+  oaoy:
     type: http
-    path: ./proxies/twnode.yaml
-    url: https://raw.fastgit.org/Lazyhms/clash-rules/main/proxies/tw.yaml
+    path: ./proxies/oaoy.yaml
+    url: https://cdn.staticaly.com/gh/Lazyhms/clash-rules/main/oaoy.yaml
     interval: 86400
     health-check:
       enable: true
@@ -86,11 +86,11 @@ proxy-groups:
     type: select
     proxies:
       - FREENODE
-      - TWNODE
+      - OAOY
       - DIRECT
     use:
       - freenode
-      - twnode
+      - oaoy
 
   - name: FREENODE
     type: url-test
@@ -100,13 +100,13 @@ proxy-groups:
     use:
       - freenode
       
-  - name: TWNODE
+  - name: OAOY
     type: url-test
     interval: 300
     tolerance: 50
     url: http://www.gstatic.com/generate_204
     use:
-      - twnode
+      - oaoy
   
 rule-providers:
   reject:
