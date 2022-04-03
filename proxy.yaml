@@ -1,14 +1,17 @@
 port: 7890
 socks-port: 7891
+redir-port: 7892
+tproxy-port: 7893
 mixed-port: 7895
 allow-lan: true
 mode: rule
 ipv6: true
 log-level: silent
 bind-address: "*"
+interface-name: en0
 hosts:
-  "*.clash.dev": 127.0.0.1
-  alpha.clash.dev: ::1
+  '*.clash.dev': 127.0.0.1
+  alpha.clash.dev: '::1'
 external-controller: 0.0.0.0:9090
 experimental:
   ignore-resolve-fail: true
@@ -37,6 +40,7 @@ dns:
     - 114.114.115.115
     - 149.112.112.112
   nameserver:
+    - dhcp://en0
     - tls://doh.pub:853
     - tls://dns.alidns.com:853
     - https://doh.pub/dns-query
