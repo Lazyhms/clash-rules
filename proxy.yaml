@@ -61,6 +61,14 @@ dns:
       - 0.0.0.0/32
       - 127.0.0.0/8
       - 240.0.0.0/4
+  tun: 
+     enable: true
+     stack: gvisor
+     dns-hijack:
+       - 198.18.0.2:53
+     macOS-auto-route: true
+     macOS-auto-detect-interface: true
+
 clash-for-android:
   append-system-dns: true
 
