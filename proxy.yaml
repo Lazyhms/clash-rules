@@ -6,6 +6,9 @@ mode: rule
 ipv6: true
 log-level: silent
 bind-address: "*"
+hosts:
+  "*.clash.dev": 127.0.0.1
+  alpha.clash.dev: ::1
 external-controller: 0.0.0.0:9090
 experimental:
   ignore-resolve-fail: true
