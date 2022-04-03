@@ -4,16 +4,16 @@ mixed-port: 7895
 allow-lan: true
 mode: rule
 ipv6: true
-log-level: info
+log-level: silent
 bind-address: "*"
-external-controller: :9090
+external-controller: 0.0.0.0:9090
 experimental:
   ignore-resolve-fail: true
 
 dns:
   enable: true
   ipv6: true
-  listen: :5450
+  listen: 0.0.0.0:5450
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   default-nameserver:
@@ -58,7 +58,11 @@ dns:
     geoip: true
     geoip-code: CN
     ipcidr:
+      - 0.0.0.0/32
+      - 127.0.0.0/8
       - 240.0.0.0/4
+clash-for-android:
+  append-system-dns: true
 
 proxy-providers:
   freenode:
