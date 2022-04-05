@@ -282,19 +282,21 @@ rule-providers:
     interval: 86400
 
 rules:
-  - RULE-SET,applications,DIRECT
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,reject,REJECT
-  - RULE-SET,icloud,DIRECT
-  - RULE-SET,apple,DIRECT
-  - RULE-SET,google,DIRECT
+  - RULE-SET,applications,DIRECT,no-resolve
+  - DOMAIN,clash.razord.top,DIRECT,no-resolve
+  - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
+  - DOMAIN-KEYWORD,google,PROXY
+  - RULE-SET,private,DIRECT,no-resolve
+  - RULE-SET,reject,REJECT,no-resolve
+  - RULE-SET,icloud,DIRECT,no-resolve
+  - RULE-SET,apple,DIRECT,no-resolve
+  - RULE-SET,google,DIRECT,no-resolve
   - RULE-SET,proxy,PROXY
-  - RULE-SET,direct,DIRECT
-  - RULE-SET,lancidr,DIRECT
-  - RULE-SET,cncidr,DIRECT
+  - RULE-SET,direct,DIRECT,no-resolve
+  - RULE-SET,lancidr,DIRECT,no-resolve
+  - RULE-SET,cncidr,DIRECT,no-resolve
   - RULE-SET,telegramcidr,PROXY
-  - GEOIP,LAN,DIRECT
-  - GEOIP,CN,DIRECT
+  - GEOIP,,DIRECT,no-resolve
+  - GEOIP,LAN,DIRECT,no-resolve
+  - GEOIP,CN,DIRECT,no-resolve
   - MATCH,PROXY
