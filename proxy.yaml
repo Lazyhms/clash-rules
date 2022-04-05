@@ -1,7 +1,7 @@
 port: 7890
 socks-port: 7891
-redir-port: 7892
-tproxy-port: 7893
+# redir-port: 7892
+# tproxy-port: 7893
 mixed-port: 7895
 allow-lan: true
 mode: rule
@@ -10,17 +10,17 @@ log-level: silent
 bind-address: "*"
 interface-name: en0
 # FAKE-IP 模式下无效
-# hosts:
-#  '*.clash.dev': '127.0.0.1'
-#  'alpha.clash.dev': '::1'
-external-controller: :9090
+hosts:
+  "*.clash.dev": "127.0.0.1"
+  "alpha.clash.dev": "::1"
+external-controller: 0.0.0.0:9090
 experimental:
   ignore-resolve-fail: true
 
 dns:
   enable: true
   ipv6: true
-  listen: :5450
+  listen: 0.0.0.0:5450
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   # 白名单
@@ -123,13 +123,13 @@ dns:
       - 0.0.0.0/32
       - 127.0.0.0/8
       - 240.0.0.0/4
-#  tun: 
-#     enable: true
-#     stack: gvisor
-#     dns-hijack:
-#       - 198.18.0.2:53
-#     macOS-auto-route: true
-#     macOS-auto-detect-interface: true
+  tun: 
+     enable: true
+     stack: gvisor
+     dns-hijack:
+       - 198.18.0.2:53
+     macOS-auto-route: true
+     macOS-auto-detect-interface: true
 
 clash-for-android:
   append-system-dns: true
