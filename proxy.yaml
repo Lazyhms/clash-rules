@@ -13,14 +13,14 @@ interface-name: en0
 hosts:
   '*.clash.dev': '127.0.0.1'
   'alpha.clash.dev': '::1'
-external-controller: 0.0.0.0:9090
+external-controller: :9090
 experimental:
   ignore-resolve-fail: true
 
 dns:
   enable: true
   ipv6: true
-  listen: 0.0.0.0:5450
+  listen: :5450
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   # 白名单
@@ -295,7 +295,6 @@ rules:
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,cncidr,DIRECT
   - RULE-SET,telegramcidr,PROXY
-  - GEOIP,,DIRECT
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,PROXY
