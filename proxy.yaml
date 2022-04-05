@@ -47,17 +47,6 @@ dns:
     - time6.aliyun.com
     - time7.aliyun.com
     - "*.time.edu.cn"
-    - time1.apple.com
-    - time2.apple.com
-    - time3.apple.com
-    - time4.apple.com
-    - time5.apple.com
-    - time6.apple.com
-    - time7.apple.com
-    - time1.google.com
-    - time2.google.com
-    - time3.google.com
-    - time4.google.com
     - music.163.com
     - "*.music.163.com"
     - "*.126.net"
@@ -293,20 +282,20 @@ rule-providers:
     interval: 86400
 
 rules:
-  - RULE-SET,applications,DIRECT,no-resolve
-  - DOMAIN,clash.razord.top,DIRECT,no-resolve
-  - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
-  - RULE-SET,private,DIRECT,no-resolve
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
   - RULE-SET,icloud,DIRECT
   - RULE-SET,apple,DIRECT
   - RULE-SET,google,DIRECT
   - RULE-SET,proxy,PROXY
-  - RULE-SET,direct,DIRECT,no-resolve
-  - RULE-SET,lancidr,DIRECT,no-resolve
-  - RULE-SET,cncidr,DIRECT,no-resolve
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
   - RULE-SET,telegramcidr,PROXY
   - GEOIP,,DIRECT
-  - GEOIP,LAN,DIRECT,no-resolve
-  - GEOIP,CN,DIRECT,no-resolve
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
   - MATCH,PROXY
