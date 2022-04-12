@@ -27,12 +27,13 @@ dns:
   # 在以下列表的域名将不会被解析为 fake ip，这些域名相关的解析请求将会返回它们真实的 IP 地址
   fake-ip-filter:
     - '*.lan'
-    - '*.linksys.com'
-    - '*.linksyssmartwifi.com'
-    - 'swscan.apple.com'
-    - 'mesu.apple.com'
-    - '*.msftconnecttest.com'
-    - '*.msftncsi.com'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
     - 'time.*.com'
     - 'time.*.gov'
     - 'time.*.edu.cn'
@@ -45,7 +46,6 @@ dns:
     - 'time6.*.com'
     - 'time7.*.com'
     - 'ntp.*.com'
-    - 'ntp.*.com'
     - 'ntp1.*.com'
     - 'ntp2.*.com'
     - 'ntp3.*.com'
@@ -57,7 +57,8 @@ dns:
     - '*.ntp.org.cn'
     - '+.pool.ntp.org'
     - 'time1.cloud.tencent.com'
-    - '+.music.163.com'
+    - 'music.163.com'
+    - '*.music.163.com'
     - '*.126.net'
     - 'musicapi.taihe.com'
     - 'music.taihe.com'
@@ -67,20 +68,55 @@ dns:
     - 'api-jooxtt.sanook.com'
     - 'api.joox.com'
     - 'joox.com'
-    - '+.y.qq.com'
-    - '+.music.tc.qq.com'
+    - 'y.qq.com'
+    - '*.y.qq.com'
+    - 'streamoc.music.tc.qq.com'
+    - 'mobileoc.music.tc.qq.com'
+    - 'isure.stream.qqmusic.qq.com'
+    - 'dl.stream.qqmusic.qq.com'
     - 'aqqmusic.tc.qq.com'
-    - '+.stream.qqmusic.qq.com'
+    - 'amobile.music.tc.qq.com'
     - '*.xiami.com'
-    - '+.music.migu.cn'
+    - '*.music.migu.cn'
+    - 'music.migu.cn'
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - 'msftconnecttest.com'
+    - 'msftncsi.com'
+    - 'localhost.ptlogin2.qq.com'
+    - 'localhost.sec.qq.com'
     - '+.srv.nintendo.net'
     - '+.stun.playstation.net'
     - 'xbox.*.microsoft.com'
-    - '+.xboxlive.com'
-    - 'localhost.ptlogin2.qq.com'
+    - 'xnotify.xboxlive.com'
+    - '+.battlenet.com.cn'
+    - '+.wotgame.cn'
+    - '+.wggames.cn'
+    - '+.wowsgame.cn'
+    - '+.wargaming.net'
     - 'proxy.golang.org'
     - 'stun.*.*'
     - 'stun.*.*.*'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*.*.*'
+    - 'heartbeat.belkin.com'
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - '*.router.asus.com'
+    - 'mesu.apple.com'
+    - 'swscan.apple.com'
+    - 'swquery.apple.com'
+    - 'swdownload.apple.com'
+    - 'swcdn.apple.com'
+    - 'swdist.apple.com'
+    - 'lens.l.google.com'
+    - 'stun.l.google.com'
+    - '+.nflxvideo.net'
+    - '*.square-enix.com'
+    - '*.finalfantasyxiv.com'
+    - '*.ffxiv.com'
+    - '*.mcdn.bilivideo.cn'
   default-nameserver:
     - 1.0.0.1
     - 1.1.1.1
@@ -125,16 +161,35 @@ dns:
     geoip-code: CN
     # 被考虑为被污染的地址
     ipcidr:
-      - 0.0.0.0/32
+      - 0.0.0.0/8
+      - 10.0.0.0/8
+      - 100.64.0.0/10
       - 127.0.0.0/8
+      - 169.254.0.0/16
+      - 172.16.0.0/12
+      - 192.0.0.0/24
+      - 192.0.2.0/24
+      - 192.88.99.0/24
+      - 192.168.0.0/16
+      - 198.18.0.0/15
+      - 198.51.100.0/24
+      - 203.0.113.0/24
+      - 224.0.0.0/4
       - 240.0.0.0/4
-  tun: 
-     enable: true
-     stack: gvisor
-     dns-hijack:
-       - 198.18.0.2:53
-     macOS-auto-route: true
-     macOS-auto-detect-interface: true
+      - 255.255.255.255/32
+    domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
+      - '+.githubusercontent.com'
+      - '+.googlevideo.com'
+tun: 
+  enable: true
+  stack: gvisor
+  dns-hijack:
+    - 198.18.0.2:53
+  macOS-auto-route: true
+  macOS-auto-detect-interface: true
 
 clash-for-android:
   append-system-dns: true
