@@ -17,19 +17,15 @@ jobs:
         run: |
         
           curl "https://cdn.jsdelivr.net/gh/oslook/clash-freenode@master/clash.yaml" > freenode.yaml
-
+          curl "https://dllx.tk/GreenFishYYDS-Clash" > greenfish.yaml
+          
           sed -i '/^proxies:/,/^proxy-groups:/!d' freenode.yaml 
+          sed -i '/^proxies:/,/^proxy-groups:/!d' greenfish.yaml          
           
           sed -i '$d' freenode.yaml
-          
-          if [ ! -s freenode.yaml ]; then rm -f freenode.yaml; fi
-          
-          curl "https://dllx.tk/GreenFishYYDS-Clash" > greenfish.yaml
-
-          sed -i '/^proxies:/,/^proxy-groups:/!d' greenfish.yaml 
-          
           sed -i '$d' greenfish.yaml
           
+          if [ ! -s freenode.yaml ]; then rm -f freenode.yaml; fi
           if [ ! -s greenfish.yaml ]; then rm -f greenfish.yaml; fi
           
       - name: Git push to release
@@ -42,9 +38,3 @@ jobs:
           git commit -m "${{ env.RELEASE_NAME }}"
           git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git push -f origin release
-          
-      - name: Purge jsdelivr cdn
-        run: |
-          for file in $(ls); do
-            curl "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
-          done
