@@ -214,11 +214,11 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  
-  oaoy:
+
+  oaxynode:
     type: http
-    path: ./proxies/oaoy.yaml
-    url: https://cdn.staticaly.com/gh/Lazyhms/clash-rules/main/oaoy.yaml
+    path: ./proxies/greenfish.yaml
+    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/oaxynode.yaml
     interval: 86400
     health-check:
       enable: true
@@ -231,12 +231,8 @@ proxy-groups:
     proxies:
       - FREENODE
       - GREENFISH
-      - OAOY
+      - OAXYNODE
       - DIRECT
-    use:
-      - freenode
-      - greenfish
-      - oaoy
 
   - name: FREENODE
     type: url-test
@@ -254,13 +250,13 @@ proxy-groups:
     use:
       - greenfish
   
-  - name: OAOY
+  - name: OAXYNODE
     type: url-test
     interval: 300
     tolerance: 50
     url: http://www.gstatic.com/generate_204
     use:
-      - oaoy
+      - oaxynode
   
 rule-providers:
   reject:
@@ -370,7 +366,7 @@ rules:
   - RULE-SET,reject,REJECT,no-resolve
   - RULE-SET,icloud,DIRECT,no-resolve
   - RULE-SET,apple,DIRECT,no-resolve
-  - RULE-SET,google,DIRECT,no-resolve
+  - RULE-SET,google,PROXY
   - RULE-SET,proxy,PROXY
   - RULE-SET,direct,DIRECT,no-resolve
   - RULE-SET,lancidr,DIRECT,no-resolve
