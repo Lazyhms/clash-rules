@@ -18,7 +18,7 @@ jobs:
         
           curl "https://cdn.jsdelivr.net/gh/oslook/clash-freenode@master/clash.yaml" > freenode.yaml
           curl "https://raw.gitfast.tk/GreenFishStudio/GreenFish/master/Subscription/Clash/GreenFishYYDS" > greenfish.yaml
-          curl "https://raw.fastgit.org/anaer/Sub/main/clash.yaml" > oaxynode.yaml
+          curl "https://raw.githubusercontent.com/anaer/Sub/main/clash.yml" > oaxynode.yaml
 
           sed -i '/^proxies:/,/^proxy-groups:/!d' freenode.yaml
           sed -i '/^proxies:/,/^proxy-groups:/!d' greenfish.yaml
