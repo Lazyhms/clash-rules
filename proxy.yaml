@@ -220,7 +220,7 @@ proxy-providers:
 
   oaxynode:
     type: http
-    path: ./proxies/greenfish.yaml
+    path: ./proxies/oaxynode.yaml
     url: https://raw.fastgit.org/Lazyhms/clash-rules/release/oaxynode.yaml
     interval: 86400
     health-check:
