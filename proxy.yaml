@@ -50,7 +50,7 @@ proxy-providers:
   freenode:
     type: http
     path: ./proxies/freenode.yaml
-    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/freenode.yaml
+    url: https://hk1.monika.love/Lazyhms/clash-rules/release/freenode.yaml
     interval: 86400
     health-check:
       enable: true
@@ -60,7 +60,7 @@ proxy-providers:
   greenfish:
     type: http
     path: ./proxies/greenfish.yaml
-    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/greenfish.yaml
+    url: https://hk1.monika.love/Lazyhms/clash-rules/release/greenfish.yaml
     interval: 86400
     health-check:
       enable: true
@@ -70,7 +70,7 @@ proxy-providers:
   oaxynode:
     type: http
     path: ./proxies/oaxynode.yaml
-    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/oaxynode.yaml
+    url: https://hk1.monika.love/Lazyhms/clash-rules/release/oaxynode.yaml
     interval: 86400
     health-check:
       enable: true
