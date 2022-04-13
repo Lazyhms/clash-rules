@@ -26,11 +26,11 @@ jobs:
 
           sed -i '$d' freenode.yaml
           sed -i '$d' greenfish.yaml
-          sed -i '$d' oaxynode.yaml
+          # sed -i '$d' oaxynode.yaml
 
-          if [ ! -s freenode.yaml ]; then rm -f freenode.yaml; fi
-          if [ ! -s greenfish.yaml ]; then rm -f greenfish.yaml; fi
-          if [ ! -s oaxynode.yaml ]; then rm -f oaxynode.yaml; fi
+          # if [ ! -s freenode.yaml ]; then rm -f freenode.yaml; fi
+          # if [ ! -s greenfish.yaml ]; then rm -f greenfish.yaml; fi
+          # if [ ! -s oaxynode.yaml ]; then rm -f oaxynode.yaml; fi
 
       - name: Git push to release
         run: |
