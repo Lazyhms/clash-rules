@@ -193,8 +193,8 @@ tun:
   stack: system
   dns-hijack:
     - 198.18.0.2:53
-  macOS-auto-route: true
-  macOS-auto-detect-interface: true
+  # macOS-auto-route: true
+  # macOS-auto-detect-interface: true
 interface-name: lazy0
      
 proxy-providers:
