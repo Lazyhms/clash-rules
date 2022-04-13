@@ -6,17 +6,30 @@ mixed-port: 7895
 allow-lan: true
 mode: rule
 ipv6: true
-log-level: silent
+log-level: info
 bind-address: "*"
+external-controller: :9090
+
 # interface-name: en0
 # FAKE-IP 模式下无效
 hosts:
-#  '*.clash.dev': 127.0.0.1
-#  '.dev': 127.0.0.1
-#  'alpha.clash.dev': '::1'
-external-controller: :9090
+  '*.clash.dev': 127.0.0.1
+  '.dev': 127.0.0.1
+  'alpha.clash.dev': '::1'
+profile:
+  store-selected: false
 experimental:
   ignore-resolve-fail: true
+clash-for-android:
+  append-system-dns: true
+
+tun: 
+  enable: true
+  stack: gvisor
+  dns-hijack:
+    - 198.18.0.2:53
+  macOS-auto-route: true
+  macOS-auto-detect-interface: true
 
 dns:
   enable: true
@@ -183,17 +196,7 @@ dns:
       - '+.youtube.com'
       - '+.githubusercontent.com'
       - '+.googlevideo.com'
-tun: 
-  enable: true
-  stack: gvisor
-  dns-hijack:
-    - 198.18.0.2:53
-  macOS-auto-route: true
-  macOS-auto-detect-interface: true
-
-clash-for-android:
-  append-system-dns: true
-
+      
 proxy-providers:
   freenode:
     type: http
