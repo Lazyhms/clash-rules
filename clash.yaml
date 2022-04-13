@@ -6,7 +6,7 @@ mixed-port: 7895
 allow-lan: true
 mode: rule
 ipv6: true
-log-level: info
+log-level: debug
 bind-address: "*"
 interface-name: en0
 external-controller: 127.0.0.1:9090
@@ -26,7 +26,7 @@ experimental:
 dns:
   enable: true
   ipv6: true
-  listen: 0.0.0.0:53
+  listen: 127.0.0.1:5450
   use-hosts: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
