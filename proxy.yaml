@@ -8,7 +8,6 @@ mode: rule
 ipv6: true
 log-level: info
 bind-address: "*"
-external-controller: :9090
 dns:
   enable: true
   ipv6: false
