@@ -10,7 +10,6 @@ log-level: info
 bind-address: "*"
 external-controller: :9090
 
-# interface-name: en0
 # FAKE-IP 模式下无效
 hosts:
   '*.clash.dev': 127.0.0.1
@@ -20,19 +19,8 @@ profile:
   store-selected: false
 clash-for-android:
   append-system-dns: true
-
-tun: 
-  enable: true
-  stack: gvisor
-  dns-hijack:
-    - 198.18.0.2:53
-  macOS-auto-route: true
-  macOS-auto-detect-interface: true
-
 experimental:
   ignore-resolve-fail: true
-  interface-name: en0
-interface-name: en1
 
 dns:
   enable: true
@@ -199,7 +187,16 @@ dns:
       - '+.youtube.com'
       - '+.githubusercontent.com'
       - '+.googlevideo.com'
-      
+
+tun: 
+  enable: true
+  stack: system
+  dns-hijack:
+    - 198.18.0.2:53
+  macOS-auto-route: true
+  macOS-auto-detect-interface: true
+interface-name: lazy0
+     
 proxy-providers:
   freenode:
     type: http
