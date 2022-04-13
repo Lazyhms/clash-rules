@@ -18,8 +18,6 @@ hosts:
   'alpha.clash.dev': '::1'
 profile:
   store-selected: false
-experimental:
-  ignore-resolve-fail: true
 clash-for-android:
   append-system-dns: true
 
@@ -30,6 +28,11 @@ tun:
     - 198.18.0.2:53
   macOS-auto-route: true
   macOS-auto-detect-interface: true
+
+experimental:
+  ignore-resolve-fail: true
+  interface-name: en0
+interface-name: en1
 
 dns:
   enable: true
