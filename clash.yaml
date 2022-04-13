@@ -8,7 +8,8 @@ mode: rule
 ipv6: true
 log-level: info
 bind-address: "*"
-external-controller: :9090
+interface-name: en0
+external-controller: 127.0.0.1:9090
 
 # FAKE-IP 模式下无效
 hosts:
@@ -25,7 +26,8 @@ experimental:
 dns:
   enable: true
   ipv6: true
-  listen: :5450
+  listen: 0.0.0.0:53
+  use-hosts: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   # 在以下列表的域名将不会被解析为 fake ip，这些域名相关的解析请求将会返回它们真实的 IP 地址
@@ -195,7 +197,6 @@ tun:
     - 198.18.0.2:53
   auto-route: true
   auto-detect-interface: true
-interface-name: lazy0
      
 proxy-providers:
   freenode:
