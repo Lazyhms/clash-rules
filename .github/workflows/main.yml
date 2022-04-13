@@ -18,19 +18,19 @@ jobs:
         
           curl "https://cdn.jsdelivr.net/gh/oslook/clash-freenode@master/clash.yaml" > freenode.yaml
           curl "https://raw.gitfast.tk/GreenFishStudio/GreenFish/master/Subscription/Clash/GreenFishYYDS" > greenfish.yaml
-          curl "https://raw.fastgit.org/anaer/Sub/main/clash.yml" > oaxynode.yaml
+          curl "https://raw.fastgit.org/anaer/Sub/main/clash.yaml" > oaxynode.yaml
 
           sed -i '/^proxies:/,/^proxy-groups:/!d' freenode.yaml
           sed -i '/^proxies:/,/^proxy-groups:/!d' greenfish.yaml
-          # sed -i '/^proxies:/,/^proxy-groups:/!d' oaxynode.yaml
+          sed -i '/^proxies:/,/^proxy-groups:/!d' oaxynode.yaml
 
           sed -i '$d' freenode.yaml
           sed -i '$d' greenfish.yaml
-          # sed -i '$d' oaxynode.yaml
+          sed -i '$d' oaxynode.yaml
 
           if [ ! -s freenode.yaml ]; then rm -f freenode.yaml; fi
           if [ ! -s greenfish.yaml ]; then rm -f greenfish.yaml; fi
-          # if [ ! -s oaxynode.yaml ]; then rm -f oaxynode.yaml; fi
+          if [ ! -s oaxynode.yaml ]; then rm -f oaxynode.yaml; fi
 
       - name: Git push to release
         run: |
