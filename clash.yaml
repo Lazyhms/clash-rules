@@ -200,7 +200,7 @@ proxy-providers:
   freenode:
     type: http
     path: ./proxies/freenode.yaml
-    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/freenode.yaml
+    url: https://raw.iqiq.io/Lazyhms/clash-rules/release/freenode.yaml
     interval: 86400
     health-check:
       enable: true
@@ -210,7 +210,7 @@ proxy-providers:
   greenfish:
     type: http
     path: ./proxies/greenfish.yaml
-    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/greenfish.yaml
+    url: https://raw.iqiq.io/Lazyhms/clash-rules/release/greenfish.yaml
     interval: 86400
     health-check:
       enable: true
@@ -220,7 +220,7 @@ proxy-providers:
   oaxynode:
     type: http
     path: ./proxies/oaxynode.yaml
-    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/oaxynode.yaml
+    url: https://raw.iqiq.io/Lazyhms/clash-rules/release/oaxynode.yaml
     interval: 86400
     health-check:
       enable: true
@@ -230,7 +230,7 @@ proxy-providers:
   obxynode:
     type: http
     path: ./proxies/obxynode.yaml
-    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/obxynode.yaml
+    url: https://raw.iqiq.io/Lazyhms/clash-rules/release/obxynode.yaml
     interval: 86400
     health-check:
       enable: true
@@ -240,7 +240,7 @@ proxy-providers:
   ocxynode:
     type: http
     path: ./proxies/ocxynode.yaml
-    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/ocxynode.yaml
+    url: https://raw.iqiq.io/Lazyhms/clash-rules/release/ocxynode.yaml
     interval: 86400
     health-check:
       enable: true
