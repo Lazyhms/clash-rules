@@ -6,9 +6,8 @@ mixed-port: 7895
 allow-lan: true
 mode: rule
 ipv6: true
-log-level: debug
+log-level: info
 bind-address: "*"
-interface-name: en0
 external-controller: :9090
 
 # FAKE-IP 模式下无效
@@ -21,7 +20,6 @@ profile:
 clash-for-android:
   append-system-dns: true
 experimental:
-  interface-name: en0
   ignore-resolve-fail: true
 
 dns:
