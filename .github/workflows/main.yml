@@ -20,7 +20,7 @@ jobs:
           curl "https://raw.gitfast.tk/GreenFishStudio/GreenFish/master/Subscription/Clash/GreenFishYYDS" > greenfish.yaml
           curl "https://raw.githubusercontent.com/anaer/Sub/main/clash.yml" > oaxynode.yaml
           curl "https://raw.githubusercontent.com/alanbobs999/TopFreeProxies/master/Eternity.yml" > obxynode.yaml
-          curl "https://raw.fastgit.org/Rokate/Proxy-Sub/main/clash/clash_ssr.yml" > ocxynode.yaml
+          curl "https://suo.yt/h17GUTQ" > ocxynode.yaml
 
           sed -i '/^proxies:/,/^proxy-groups:/!d' freenode.yaml
           sed -i '/^proxies:/,/^proxy-groups:/!d' greenfish.yaml
