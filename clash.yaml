@@ -140,7 +140,6 @@ dns:
     - 114.114.115.115
     - 149.112.112.112
   nameserver:
-    # - dhcp://en0
     - tls://doh.pub:853
     - tls://dns.alidns.com:853
     - https://doh.pub/dns-query
