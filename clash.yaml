@@ -188,13 +188,16 @@ dns:
       - '+.githubusercontent.com'
       - '+.googlevideo.com'
 
-tun: 
+experimental:
+  interface-name: en0
+
+tun:
   enable: true
-  stack: system
+  stack: system # or gvisor
   dns-hijack:
     - 198.18.0.2:53
-  auto-route: true
-  auto-detect-interface: true
+#   auto-route: true # auto set global route
+#   auto-detect-interface: true # conflict with interface-name
      
 proxy-providers:
   freenode:
