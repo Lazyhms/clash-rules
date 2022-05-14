@@ -122,6 +122,7 @@ dns:
     - '*.finalfantasyxiv.com'
     - '*.ffxiv.com'
     - '*.mcdn.bilivideo.cn'
+    - 'local.adguard.org'
   default-nameserver:
     - 1.0.0.1
     - 1.1.1.1
