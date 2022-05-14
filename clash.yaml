@@ -381,6 +381,7 @@ rule-providers:
 
 rules:
   - RULE-SET,applications,DIRECT,no-resolve
+  - DOMAIN,local.adguard.org,DIRECT,no-resolve
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
   - DOMAIN-KEYWORD,google,PROXY
