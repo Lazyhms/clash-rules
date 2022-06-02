@@ -20,21 +20,25 @@ jobs:
           curl "https://raw.gitfast.tk/GreenFishStudio/GreenFish/master/Subscription/Clash/GreenFishYYDS" > greenfish.yaml
           curl "https://raw.githubusercontent.com/anaer/Sub/main/clash.yml" > oaxynode.yaml
           curl "https://raw.githubusercontent.com/alanbobs999/TopFreeProxies/master/Eternity.yml" > obxynode.yaml
-
+          curl "https://raw.githubusercontent.com/aiboboxx/clashfree/main/clash.yml" > ocxynode.yaml
+          
           sed -i '/^proxies:/,/^proxy-groups:/!d' freenode.yaml
           sed -i '/^proxies:/,/^proxy-groups:/!d' greenfish.yaml
           sed -i '/^proxies:/,/^proxy-groups:/!d' oaxynode.yaml
           sed -i '/^proxies:/,/^proxy-groups:/!d' obxynode.yaml
-
+          sed -i '/^proxies:/,/^proxy-groups:/!d' ocxynode.yaml
+          
           sed -i '$d' freenode.yaml
           sed -i '$d' greenfish.yaml
           sed -i '$d' oaxynode.yaml
           sed -i '$d' obxynode.yaml
+          sed -i '$d' ocxynode.yaml
 
           if [ ! -s freenode.yaml ]; then rm -f freenode.yaml; fi
           if [ ! -s greenfish.yaml ]; then rm -f greenfish.yaml; fi
           if [ ! -s oaxynode.yaml ]; then rm -f oaxynode.yaml; fi
           if [ ! -s obxynode.yaml ]; then rm -f obxynode.yaml; fi
+          if [ ! -s ocxynode.yaml ]; then rm -f ocxynode.yaml; fi
 
       - name: Git push to release
         run: |
