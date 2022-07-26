@@ -16,7 +16,7 @@ jobs:
       - name: Generate folder and files
         run: |
           
-          declare -A source = (
+          declare -A source=(
             ["freenode"]="https://raw.githubusercontent.com/oslook/clash-freenode/main/clash.yaml"
             ["oaxynode"]="https://raw.githubusercontent.com/anaer/Sub/main/clash.yml"
             ["obxynode"]="https://raw.githubusercontent.com/alanbobs999/TopFreeProxies/master/Eternity.yml"
