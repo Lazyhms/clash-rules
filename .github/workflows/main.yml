@@ -24,8 +24,8 @@ jobs:
             # ["greenfish"] = "https://raw.gitfast.tk/GreenFishStudio/GreenFish/master/Subscription/Clash/GreenFishYYDS"
           )
           
-          for key in ${!myMap[@]};do
-            curl ${myMap[$key]} > $key.yaml
+          for key in ${!source[@]};do
+            curl ${source[$key]} > $key.yaml
             sed -i '/^proxies:/,/^proxy-groups:/!d' $key.yaml
             sed -i '$d' $key.yaml
             if [ ! -s $key.yaml ]; then rm -f $key.yaml; fi
