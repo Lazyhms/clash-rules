@@ -15,31 +15,22 @@ jobs:
 
       - name: Generate folder and files
         run: |
-        
-          curl "https://raw.githubusercontent.com/oslook/clash-freenode/main/clash.yaml" > freenode.yaml
-          curl "https://raw.gitfast.tk/GreenFishStudio/GreenFish/master/Subscription/Clash/GreenFishYYDS" > greenfish.yaml
-          curl "https://raw.githubusercontent.com/anaer/Sub/main/clash.yml" > oaxynode.yaml
-          curl "https://raw.githubusercontent.com/alanbobs999/TopFreeProxies/master/Eternity.yml" > obxynode.yaml
-          curl "https://raw.githubusercontent.com/aiboboxx/clashfree/main/clash.yml" > ocxynode.yaml
           
-          sed -i '/^proxies:/,/^proxy-groups:/!d' freenode.yaml
-          sed -i '/^proxies:/,/^proxy-groups:/!d' greenfish.yaml
-          sed -i '/^proxies:/,/^proxy-groups:/!d' oaxynode.yaml
-          sed -i '/^proxies:/,/^proxy-groups:/!d' obxynode.yaml
-          sed -i '/^proxies:/,/^proxy-groups:/!d' ocxynode.yaml
+          declare -A source=(
+            ["freenode"] = "https://raw.githubusercontent.com/oslook/clash-freenode/main/clash.yaml"
+            ["oaxynode"] = "https://raw.githubusercontent.com/anaer/Sub/main/clash.yml"
+            ["obxynode"] = "https://raw.githubusercontent.com/alanbobs999/TopFreeProxies/master/Eternity.yml"
+            ["ocxynode"] = "https://raw.githubusercontent.com/aiboboxx/clashfree/main/clash.yml"
+            # ["greenfish"] = "https://raw.gitfast.tk/GreenFishStudio/GreenFish/master/Subscription/Clash/GreenFishYYDS"
+          )
           
-          sed -i '$d' freenode.yaml
-          sed -i '$d' greenfish.yaml
-          sed -i '$d' oaxynode.yaml
-          sed -i '$d' obxynode.yaml
-          sed -i '$d' ocxynode.yaml
-
-          if [ ! -s freenode.yaml ]; then rm -f freenode.yaml; fi
-          if [ ! -s greenfish.yaml ]; then rm -f greenfish.yaml; fi
-          if [ ! -s oaxynode.yaml ]; then rm -f oaxynode.yaml; fi
-          if [ ! -s obxynode.yaml ]; then rm -f obxynode.yaml; fi
-          if [ ! -s ocxynode.yaml ]; then rm -f ocxynode.yaml; fi
-
+          for key in ${!myMap[@]};do
+            curl ${myMap[$key]} > $key.yaml
+            sed -i '/^proxies:/,/^proxy-groups:/!d' $key.yaml
+            sed -i '$d' $key.yaml
+            if [ ! -s $key.yaml ]; then rm -f $key.yaml; fi
+          done
+          
       - name: Git push to release
         run: |
           git init
