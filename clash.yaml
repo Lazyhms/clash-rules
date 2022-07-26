@@ -207,16 +207,6 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-      
-  greenfish:
-    type: http
-    path: ./proxies/greenfish.yaml
-    url: https://raw.fastgit.org/Lazyhms/clash-rules/release/greenfish.yaml
-    interval: 86400
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
 
   oaxynode:
     type: http
@@ -253,7 +243,6 @@ proxy-groups:
     type: select
     proxies:
       - FREENODE
-      - GREENFISH
       - OAXYNODE
       - OBXYNODE
       - OCXYNODE
@@ -266,14 +255,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     use:
       - freenode
-      
-  - name: GREENFISH
-    type: url-test
-    interval: 300
-    tolerance: 50
-    url: http://www.gstatic.com/generate_204
-    use:
-      - greenfish
   
   - name: OAXYNODE
     type: url-test
