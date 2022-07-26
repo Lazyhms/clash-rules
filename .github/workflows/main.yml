@@ -21,7 +21,7 @@ jobs:
             ["oaxynode"]="https://raw.githubusercontent.com/anaer/Sub/main/clash.yml"
             ["obxynode"]="https://raw.githubusercontent.com/alanbobs999/TopFreeProxies/master/Eternity.yml"
             ["ocxynode"]="https://raw.githubusercontent.com/aiboboxx/clashfree/main/clash.yml"
-            # ["greenfish"] = "https://raw.gitfast.tk/GreenFishStudio/GreenFish/master/Subscription/Clash/GreenFishYYDS"
+            # ["greenfish"]="https://raw.gitfast.tk/GreenFishStudio/GreenFish/master/Subscription/Clash/GreenFishYYDS"
           )
           
           for key in ${!source[@]};do
