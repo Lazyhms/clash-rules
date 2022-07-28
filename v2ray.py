@@ -51,7 +51,7 @@ def decode_file():
             v2ray_data1 = re.split('@|:|#', v2ray[1])
             obj1 = {
                 "type": v2ray[0],
-                "name": urllib.parse.unquote(v2ray_data1[3])
+                "name": urllib.parse.unquote(v2ray_data1[3]),
                 "server": v2ray_data1[1],
                 "port": v2ray_data1[2],
                 "password": v2ray_data1[0],
