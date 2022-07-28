@@ -51,10 +51,11 @@ def decode_file():
             v2ray_data1 = re.split('@|:|#', v2ray[1])
             obj1 = {
                 "type": v2ray[0],
-                "password": v2ray_data1[0],
+                "name": urllib.parse.unquote(v2ray_data1[3])
                 "server": v2ray_data1[1],
                 "port": v2ray_data1[2],
-                "name": urllib.parse.unquote(v2ray_data1[3])
+                "password": v2ray_data1[0],
+                'cipher': 'auto'
             }
             json_str1 = json.dumps(obj1, ensure_ascii=False)
             file.writelines("  - " + json_str1 + "\n")
