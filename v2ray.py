@@ -57,7 +57,7 @@ def decode_file():
                 "password": v2ray_data1[0],
                 'cipher': 'auto',
                 "udp": True,
-                "skip-cert-verify": true
+                "skip-cert-verify": True
             }
             json_str1 = json.dumps(obj1, ensure_ascii=False)
             file.writelines("  - " + json_str1 + "\n")
