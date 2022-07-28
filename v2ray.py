@@ -37,7 +37,7 @@ def decode_file():
                 'uuid': jsonData.get('id'),
                 'alterId': jsonData.get('aid'),
                 'cipher': 'auto' if jsonData.get('type') == 'none' else False,
-                'ucp': True,
+                'udp': True,
                 'network': jsonData.get('net'),
                 'ws-path': jsonData.get('path'),
                 'ws-headers': {
@@ -55,7 +55,9 @@ def decode_file():
                 "server": v2ray_data1[1],
                 "port": v2ray_data1[2],
                 "password": v2ray_data1[0],
-                'cipher': 'auto'
+                'cipher': 'auto',
+                "udp": True,
+                "skip-cert-verify": true
             }
             json_str1 = json.dumps(obj1, ensure_ascii=False)
             file.writelines("  - " + json_str1 + "\n")
