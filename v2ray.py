@@ -4,18 +4,6 @@ import urllib.request
 import json
 
 
-def verfity_base64(str):
-    base64Pattern = "^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)$"
-
-    match = re.match(base64Pattern, str)
-    missing_padding = len(str) % 4
-
-    if None != match and 0 == missing_padding:
-        return True
-    else:
-        return False
-
-
 def decode_file():
     raw = urllib.request.urlopen(
         url='https://raw.githubusercontent.com/freefq/free/master/v2').read().decode('utf-8')
@@ -26,7 +14,7 @@ def decode_file():
     file.writelines("proxies:\n")
     for item in v2ray_list:
         v2ray = item.decode('utf-8').split('://')
-        if "vmess" == v2ray[0] or verfity_base64(v2ray[1]):
+        if "vmess" == v2ray[0]:
             v2ray_data = base64.b64decode(v2ray[1])
             jsonData = json.loads(v2ray_data)
             obj = {
@@ -48,18 +36,20 @@ def decode_file():
             json_str = json.dumps(obj, ensure_ascii=False)
             file.writelines("  - " + json_str + "\n")
         else:
-            v2ray_data1 = re.split('@|:|#', v2ray[1])
-            obj1 = {
+            v2ray_data = re.split('@|:|#', v2ray[1])
+            obj = {
                 "type": v2ray[0],
-                "name": urllib.parse.unquote(v2ray_data1[3]),
-                "server": v2ray_data1[1],
-                "port": v2ray_data1[2],
-                "password": v2ray_data1[0],
+                "name": urllib.parse.unquote(v2ray_data[3]),
+                "server": v2ray_data[1],
+                "port": v2ray_data[2],
+                "password": v2ray_data[0],
                 "udp": True,
                 "skip-cert-verify": True
             }
-            json_str1 = json.dumps(obj1, ensure_ascii=False)
-            file.writelines("  - " + json_str1 + "\n")
+            if("ss" == v2ray[0]):
+                obj.update({"cipher": "aes-128-cfb"})
+            json_str = json.dumps(obj, ensure_ascii=False)
+            file.writelines("  - " + json_str + "\n")
     file.close()
 
 
