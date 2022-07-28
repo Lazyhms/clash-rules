@@ -55,7 +55,6 @@ def decode_file():
                 "server": v2ray_data1[1],
                 "port": v2ray_data1[2],
                 "password": v2ray_data1[0],
-                'cipher': 'auto',
                 "udp": True,
                 "skip-cert-verify": True
             }
