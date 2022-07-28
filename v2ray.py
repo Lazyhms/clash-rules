@@ -36,7 +36,7 @@ def decode_file():
                 'port': jsonData.get('port'),
                 'uuid': jsonData.get('id'),
                 'alterId': jsonData.get('aid'),
-                'cipher': 'auto' if jsonData.get('type') == 'none' else False,
+                'cipher': 'auto',
                 'udp': True,
                 'network': jsonData.get('net'),
                 'ws-path': jsonData.get('path'),
