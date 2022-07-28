@@ -210,7 +210,7 @@ proxy-providers:
   
   freefq:
     type: http
-    path: ./proxies/freenode.yaml
+    path: ./proxies/freefq.yaml
     url: https://raw.fastgit.org/Lazyhms/clash-rules/release/freefq.yaml
     interval: 86400
     health-check:
