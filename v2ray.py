@@ -18,7 +18,7 @@ def verfity_base64(str):
 
 def decode_file():
     raw = urllib.request.urlopen(
-        url='https://raw.fastgit.org/freefq/free/master/v2').read().decode('utf-8')
+        url='https://raw.githubusercontent.com/freefq/free/master/v2').read().decode('utf-8')
     v2ray_raw = base64.b64decode(raw)
     v2ray_list = v2ray_raw.splitlines()
 
