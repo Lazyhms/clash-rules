@@ -15,7 +15,7 @@ jobs:
 
       - name: Download python3 file and run
         run: | 
-          curl https://raw.fastgit.org/Lazyhms/clash-rules/free/v2ray.py > v2ray.py
+          curl https://raw.fastgit.org/Lazyhms/clash-rules/main/v2ray.py > v2ray.py
           
           python3 v2ray.py
           
