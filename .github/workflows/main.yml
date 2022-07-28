@@ -13,6 +13,14 @@ jobs:
           echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
         shell: bash
 
+      - name: Download python3 file and run
+        run: | 
+          curl https://raw.fastgit.org/Lazyhms/clash-rules/free/v2ray.py > v2ray.py
+          
+          python3 v2ray.py
+          
+          if [ -s v2ray.py ]; then rm -f v2ray.py; fi
+          
       - name: Generate folder and files
         run: |
           
@@ -28,7 +36,6 @@ jobs:
             curl ${source[$key]} > $key.yaml
             sed -i '/^proxies:/,/^proxy-groups:/!d' $key.yaml
             sed -i '$d' $key.yaml
-            if [ ! -s $key.yaml ]; then rm -f $key.yaml; fi
           done
           
       - name: Git push to release
