@@ -1,0 +1,1157 @@
+proxies:
+- alterId: 0
+  cipher: auto
+  country: 🇺🇸US
+  h2-opts: {}
+  http-opts: {}
+  name: 美国 001
+  network: tcp
+  port: 443
+  server: 51.81.223.25
+  skip-cert-verify: true
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+  ws-path: /
+- alterId: 60
+  cipher: auto
+  country: 🇺🇸US
+  h2-opts: {}
+  http-opts: {}
+  name: 美国 002
+  network: ws
+  port: 443
+  server: vfly6.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: f3b6fd11-4444-4efa-b19a-13ad22d0a782
+  ws-path: /myblog
+- alterId: 0
+  cipher: auto
+  country: 🇺🇸US
+  h2-opts: {}
+  http-opts: {}
+  name: 美国 003
+  network: tcp
+  port: 443
+  server: 51.81.223.17
+  skip-cert-verify: true
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+  ws-path: /
+- alterId: 0
+  cipher: auto
+  country: 🇺🇸US
+  h2-opts: {}
+  http-opts: {}
+  name: 美国 004
+  port: 443
+  server: 51.81.223.10
+  servername: 51.81.223.10
+  skip-cert-verify: true
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+  ws-path: /
+- alterId: 0
+  cipher: auto
+  country: 🇺🇸US
+  h2-opts: {}
+  http-opts: {}
+  name: 美国 005
+  port: 443
+  server: 51.81.223.26
+  servername: 51.81.223.26
+  skip-cert-verify: true
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+  ws-path: /
+- alterId: 32
+  cipher: auto
+  country: 🇺🇸US
+  h2-opts: {}
+  http-opts: {}
+  name: 美国 006
+  network: tcp
+  port: 443
+  server: 51.81.223.22
+  skip-cert-verify: true
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+  ws-path: /
+- alterId: 32
+  cipher: auto
+  country: 🇺🇸US
+  h2-opts: {}
+  http-opts: {}
+  name: 美国 007
+  network: tcp
+  port: 443
+  server: 51.81.223.19
+  skip-cert-verify: true
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+  ws-path: /
+- alterId: 0
+  cipher: auto
+  country: 🇺🇸US
+  h2-opts: {}
+  http-opts: {}
+  name: 美国 008
+  network: tcp
+  port: 443
+  server: 51.81.223.21
+  skip-cert-verify: true
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+  ws-path: /
+- alterId: 0
+  cipher: auto
+  name: 美国 031
+  network: ws
+  port: 80
+  server: v116.v2dns.bar
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: c97cf46e-1554-36cb-8b36-c3556b883dc4
+  ws-opts:
+    headers:
+      Host: v116.v2dns.bar
+    path: /v116-DtoEwAEX
+- alterId: 0
+  cipher: auto
+  name: 美国 032
+  port: 31677
+  server: 38.54.6.117
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: d47376e8-c7e0-4829-df51-809a598eff7c
+- alterId: 0
+  cipher: auto
+  name: 美国 033
+  port: 44634
+  server: 150.230.197.142
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: c2d05105-857a-4c94-be34-5534e7e8285f
+- alterId: 64
+  cipher: auto
+  name: 美国 034
+  network: ws
+  port: 443
+  server: 51.195.35.134
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 9f58234c-355b-4065-ae21-d4a63099aba5
+  ws-opts:
+    headers:
+      Host: 51.195.35.134
+    path: /path/273213070933
+- alterId: 0
+  cipher: auto
+  name: 美国 035
+  port: 1258
+  server: 23.230.146.254
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: edeb41cc-a76a-47f2-fa96-b9141e66a2b0
+- alterId: 0
+  cipher: auto
+  name: 美国 036
+  network: ws
+  port: 80
+  server: 104.18.24.139
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  ws-opts:
+    headers:
+      Host: sg1-v2ray.sshkit.org
+    path: /sshkit/5206194863/62c7702a0ea8b/
+- alterId: 32
+  cipher: auto
+  name: 美国 037
+  port: 443
+  server: 51.81.223.36
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+- alterId: 32
+  cipher: auto
+  name: 美国 038
+  port: 443
+  server: 51.81.223.31
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+- alterId: 0
+  cipher: auto
+  name: 美国 039
+  port: 32586
+  server: 129.159.41.233
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 341a9182-c423-499c-c46e-d17838b29037
+- alterId: 4
+  cipher: auto
+  name: 美国 041
+  network: ws
+  port: 443
+  server: 192.186.129.66
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: usa-buffalo.lvuft.com
+    path: /ws
+- alterId: 4
+  cipher: auto
+  name: 美国 042
+  network: ws
+  port: 443
+  server: usa-buffalo.lvuft.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: usa-buffalo.lvuft.com
+    path: /ws
+- alterId: 0
+  cipher: auto
+  name: 美国 043
+  network: ws
+  port: 11188
+  server: 147.78.247.12
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 1dda6ae1-d179-405a-8542-0a1fb8328b0e
+  ws-opts:
+    headers:
+      Host: 147.78.247.12
+    path: /hello
+- alterId: 0
+  cipher: auto
+  name: 美国 044
+  port: 25881
+  server: 107.173.250.129
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 68f8ed9c-9ac3-427a-b16c-6f1d7fb7f12d
+- alterId: 4
+  cipher: auto
+  name: 美国 045
+  network: ws
+  port: 443
+  server: 154.94.214.2
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: lvuft.com
+    path: /ws
+- alterId: 0
+  cipher: auto
+  name: 美国 046
+  network: ws
+  port: 15885
+  server: xmrh014.xmrth-node.xyz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: ab3f9ddc-7c35-3793-98f0-1c37eb9741e1
+  ws-opts:
+    headers:
+      Host: 87318706-ws.va.huya.com
+    path: /index
+- alterId: 4
+  cipher: auto
+  name: 美国 047
+  network: ws
+  port: 443
+  server: usa-washington.lvuft.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: usa-washington.lvuft.com
+    path: /ws
+- alterId: 0
+  cipher: auto
+  name: 美国 048
+  port: 25318
+  server: 107.173.250.94
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: ed293411-ab53-4ebc-f0ab-34d78fa1f5ce
+- alterId: 4
+  cipher: auto
+  name: 美国 049
+  network: ws
+  port: 443
+  server: 154.94.218.130
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: viibah6u.com
+    path: /ws
+- alterId: 64
+  cipher: auto
+  name: 美国 050
+  network: ws
+  port: 2096
+  server: xiexi.tk
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 37551ca0-8cc3-432f-ca1f-82aba1db3ef9
+  ws-opts:
+    headers:
+      Host: xiexi.tk
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国 051
+  network: ws
+  port: 23662
+  server: 173.82.226.27
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: efa2ab76-539d-4b6a-9572-24ba709fb81b
+  ws-opts:
+    headers:
+      Host: 173.82.226.27
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国 052
+  network: ws
+  port: 443
+  server: 104.23.102.53
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 5c84e109-4772-4efb-a1cb-7b09d5a1791e
+  ws-opts:
+    headers:
+      Host: bissen.114514cn.me
+    path: /Telegram@BDovo_qaq
+- alterId: 0
+  cipher: auto
+  name: 美国 053
+  port: 52015
+  server: 198.148.116.134
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 086e9fd4-1d86-49f0-fdab-a58822a36b29
+- alterId: 4
+  cipher: auto
+  name: 美国 054
+  network: ws
+  port: 443
+  server: 208.98.48.2
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: iesei1ei.com
+    path: /ws
+- alterId: 4
+  cipher: auto
+  name: 美国 055
+  network: ws
+  port: 443
+  server: iesei1ei.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: iesei1ei.com
+    path: /ws
+- alterId: 32
+  cipher: auto
+  name: 美国 056
+  port: 443
+  server: 51.81.223.0
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+- alterId: 64
+  cipher: auto
+  name: 美国 057
+  port: 28554
+  server: 23.94.120.19
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 4a4c96c5-7b8b-4612-c715-6b91a9c34d07
+- alterId: 4
+  cipher: auto
+  name: 美国 058
+  network: ws
+  port: 443
+  server: 45.35.84.162
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: usa-dallas.lvuft.com
+    path: /ws
+- alterId: 0
+  cipher: auto
+  name: 美国 059
+  port: 51009
+  server: 129.146.133.157
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 81714cef-9bde-4a08-aa50-d6bc0172d78b
+- alterId: 0
+  cipher: auto
+  name: 美国 060
+  port: 29350
+  server: 216.24.243.233
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 471ce156-3980-4a4e-b901-a27df20e9d07
+- alterId: 4
+  cipher: auto
+  name: 美国 061
+  network: ws
+  port: 443
+  server: usa-dallas.lvuft.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: usa-dallas.lvuft.com
+    path: /ws
+- alterId: 0
+  cipher: auto
+  name: 美国 062
+  network: ws
+  port: 443
+  server: erqi.live
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 7caa244f-37f1-4b0c-cc12-0c2d392d4f6a
+  ws-opts:
+    headers:
+      Host: erqi.live
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国 063
+  port: 50752
+  server: 138.2.22.234
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: df61271a-f9b0-49b1-9177-0211bba2e396
+- alterId: 0
+  cipher: auto
+  name: 美国 064
+  port: 46370
+  server: 138.2.15.23
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 998151e5-0bc5-4377-e390-c41bb26fdd0c
+- alterId: 0
+  cipher: auto
+  name: 美国 065
+  network: ws
+  port: 3389
+  server: singapore.alures.xyz
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: a3129f57-2ee1-4937-aff0-112ebd658067
+  ws-opts:
+    headers:
+      Host: singapore.alures.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国 066
+  network: ws
+  port: 8443
+  server: sg.xypan.tk
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 493100ca-502d-47f1-fc74-a6f8b2908cfc
+  ws-opts:
+    headers:
+      Host: sg.xypan.tk
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国 067
+  network: ws
+  port: 443
+  server: vfly8.win
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 8fc94fe3-cfb1-4bc7-e43b-26d4d1e5f4cd
+  ws-opts:
+    headers:
+      Host: vfly8.win
+    path: /myblog
+- alterId: 4
+  cipher: auto
+  name: 美国 068
+  network: ws
+  port: 443
+  server: 192.96.204.250
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: usa-washington.lvuft.com
+    path: /ws
+- alterId: 0
+  cipher: auto
+  name: 美国 069
+  network: ws
+  port: 23315
+  server: 138.2.80.216
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: bd6953cc-a2a6-421e-8881-d3ce9dee0a38
+  ws-opts:
+    headers:
+      Host: YouTube-aweikeji
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国 070
+  port: 29585
+  server: 192.3.124.36
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: d7f58c5e-e9cc-487f-c721-52cb79b96ac7
+- alterId: 0
+  cipher: auto
+  name: 美国 071
+  port: 35113
+  server: 152.69.209.58
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: caafe513-13a1-4357-adcc-f81ad07e54f0
+- alterId: 32
+  cipher: auto
+  name: 美国 072
+  port: 443
+  server: 51.81.223.6
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+- alterId: 0
+  cipher: auto
+  name: 美国 073
+  network: ws
+  port: 11188
+  server: 192.210.206.50
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: de0ff7f6-370e-41c9-c24a-b932c7c1ad58
+  ws-opts:
+    headers:
+      Host: 192.210.206.50
+    path: /hello
+- alterId: 0
+  cipher: auto
+  name: 美国 074
+  network: ws
+  port: 10562
+  server: 155.248.166.198
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 02140cf3-8470-4b3d-e4a8-8d40fc2f7867
+  ws-opts:
+    headers:
+      Host: YouTube-aweikeji
+    path: /
+- alterId: 32
+  cipher: auto
+  name: 美国 075
+  port: 443
+  server: 51.81.223.12
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+- alterId: 32
+  cipher: auto
+  name: 美国 076
+  port: 443
+  server: 51.81.223.14
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+- alterId: 0
+  cipher: auto
+  name: 美国 077
+  port: 1069
+  server: 152.69.197.60
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: ac8e26fe-8150-4b60-ae64-82fc77eba2cf
+- alterId: 32
+  cipher: auto
+  name: 美国 078
+  port: 443
+  server: 51.81.223.29
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+- alterId: 2
+  cipher: auto
+  name: 美国 079
+  network: ws
+  port: 443
+  server: lc-kr02-direct01.lc-kr02.lc-node.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: ec736482-173e-3eff-9114-b49df8056e7d
+  ws-opts:
+    headers:
+      Host: lc-kr02-direct01.lc-kr02.lc-node.com
+    path: /
+- alterId: 32
+  cipher: auto
+  name: 美国 080
+  port: 443
+  server: 51.81.223.18
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+- alterId: 0
+  cipher: auto
+  name: 美国 081
+  port: 26937
+  server: 96.43.86.28
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: b189d8be-273b-4487-a3c1-7ddd88fb7558
+- alterId: 32
+  cipher: auto
+  name: 美国 082
+  port: 443
+  server: 51.81.223.15
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+- alterId: 32
+  cipher: auto
+  name: 美国 083
+  port: 443
+  server: 51.81.223.4
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+- alterId: 0
+  cipher: auto
+  name: 美国 084
+  network: ws
+  port: 55053
+  server: cindy.marythunt.xyz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: ba3e022a-d6f5-4873-8f06-204a1a5f4f33
+  ws-opts:
+    headers:
+      Host: cindy.marythunt.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国 085
+  network: ws
+  port: 443
+  server: vfly4.win
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 424afb77-4724-4ddc-f4c0-35de9c2239f5
+  ws-opts:
+    headers:
+      Host: vfly4.win
+    path: /myblog
+- alterId: 0
+  cipher: auto
+  name: 美国 086
+  network: ws
+  port: 443
+  server: vfly1.win
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: e45b5aac-b852-4055-cbbf-d366499e53e8
+  ws-opts:
+    headers:
+      Host: vfly1.win
+    path: /myblog
+- alterId: 32
+  cipher: auto
+  name: 美国 087
+  port: 443
+  server: 51.81.223.13
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+- alterId: 64
+  cipher: auto
+  name: 美国 088
+  network: ws
+  port: 443
+  server: guibi.ml
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 9d090c5f-56b9-4408-fc6b-b9316cc377c1
+  ws-opts:
+    headers:
+      Host: guibi.ml
+    path: /
+- alterId: 10
+  cipher: auto
+  name: 美国 089
+  network: ws
+  port: 443
+  server: vfly9.win
+  tls: true
+  type: vmess
+  uuid: 838be9ed-d7a8-4da1-b067-b95d2a8782f5
+  ws-opts:
+    path: /myblog
+- alterId: 1
+  cipher: auto
+  name: 美国 091
+  network: ws
+  port: 443
+  server: 104.19.3.32
+  tls: true
+  type: vmess
+  uuid: 9e6ceeff-2546-3690-ac00-6fcdf31dec94
+  ws-opts:
+    headers:
+      host: v2fly.samrt.website
+    path: /chcar
+- alterId: 0
+  cipher: auto
+  name: 美国 092
+  network: ws
+  port: 443
+  server: www.digitalocean.com
+  tls: true
+  type: vmess
+  uuid: 3df66137-a428-429c-a858-8b150721b354
+  ws-opts:
+    headers:
+      host: us23.567568.ml
+    path: /youtbue@bai-piao-wang-zhe_vws
+- name: 美国 137
+  server: 20.24.209.70
+  port: 52229
+  type: vmess
+  uuid: f8d24f06-1513-33fc-bf49-34ac231fd665
+  alterId: 2
+  cipher: auto
+  network: tcp
+  skip-cert-verify: true
+  ws-path: /
+- name: 美国 138
+  server: status.qiscus.com
+  port: 443
+  type: vmess
+  uuid: 283e8955-4a4a-41ca-ac61-3eabf3077a95
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /v2ray
+- name: 美国 139
+  server: hk18.bp777.buzz
+  port: 21665
+  type: vmess
+  uuid: 57dd8fa2-1088-43bc-85df-7eeb9745f806
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /
+- name: 美国 140
+  server: 51.81.223.32
+  port: 443
+  type: vmess
+  uuid: c0156451-4efb-45e2-84fc-8d315c4650db
+  alterId: 32
+  cipher: auto
+  network: tcp
+  skip-cert-verify: true
+  ws-path: /
+- name: 美国 141
+  server: bwg2.gushidawang.cc
+  port: 57539
+  type: vmess
+  uuid: fcf7202c-bd1a-44e9-a25e-bf152f6e5c11
+  alterId: 0
+  cipher: auto
+  network: tcp
+  skip-cert-verify: true
+  ws-path: /
+- name: 美国 142
+  server: sg.guiqing.ml
+  port: 43956
+  type: vmess
+  uuid: 91df6837-896d-45bc-ec6f-0fe4b792b369
+  alterId: 0
+  cipher: auto
+  network: tcp
+  skip-cert-verify: true
+  ws-path: /
+- name: 美国 143
+  server: xr-1.herokuapp.com
+  port: 443
+  type: vmess
+  uuid: 17af76e1-a5d7-41ab-ae87-b48f185075d1
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /17af76e1-a5d7-41ab-ae87-b48f185075d1-vmess
+- name: 美国 144
+  server: lms.uin-antasari.ac.id
+  port: 80
+  type: vmess
+  uuid: 46bfdb59-83c6-4710-877e-c809b5a90dff
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /vpnneo
+- name: 美国 145
+  server: api.qiscus.com
+  port: 443
+  type: vmess
+  uuid: 8f9b60e6-1db3-42e4-97b9-1e311f427649
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /vmess-ws-makae
+- name: 美国 146
+  server: powerservice.com
+  port: 443
+  type: vmess
+  uuid: 0764a598-82c4-4b41-ba10-551a625beed5
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /sshocean
+- name: 美国 147
+  server: 20.205.2.65
+  port: 52335
+  type: vmess
+  uuid: f8d24f06-1513-33fc-bf49-34ac231fd665
+  alterId: 2
+  cipher: auto
+  network: tcp
+  skip-cert-verify: true
+  ws-path: /
+- name: 美国 148
+  server: 198.148.116.134
+  port: 22618
+  type: vmess
+  uuid: 8b7321e5-d6aa-4d81-8156-b671a3b59067
+  alterId: 0
+  cipher: auto
+  network: tcp
+  skip-cert-verify: true
+  ws-path: ''
+- name: 美国 149
+  server: 198.148.116.134
+  port: 51730
+  type: vmess
+  uuid: 8ce6bf5a-2a69-47de-992d-3f33164534fb
+  alterId: 0
+  cipher: auto
+  network: tcp
+  skip-cert-verify: true
+  ws-path: ''
+- name: 美国 150
+  server: 216.24.248.104
+  port: 29862
+  type: vmess
+  uuid: 281f345f-da96-485b-9aa3-4bc530f2ffa2
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /fdsfa
+- name: 美国 151
+  server: 216.24.248.122
+  port: 13643
+  type: vmess
+  uuid: 28b3048b-fb4e-4bee-c8f6-6c3310126c2e
+  alterId: 0
+  cipher: auto
+  network: tcp
+  skip-cert-verify: true
+  ws-path: /
+- name: 美国 152
+  server: 3.39.134.58
+  port: 443
+  type: vmess
+  uuid: d3b69a94-0282-45bc-88fd-f87df4c453b0
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /skdW1Jl
+- name: 美国 153
+  server: 104.156.229.148
+  port: 36788
+  type: vmess
+  uuid: 9fee7249-69fb-490d-e617-cfb54a249932
+  alterId: 60
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /
+- name: 美国 154
+  server: 149.57.199.151
+  port: 30345
+  type: vmess
+  uuid: ba771461-5a4a-43f1-a61b-20d48e49e756
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /fehc
+- name: 美国 155
+  server: 63.209.33.52
+  port: 44204
+  type: vmess
+  uuid: 7673d8bd-cd3d-4893-d6f1-a72d4dbc3ca8
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /234
+- name: 美国 156
+  server: us03.gogogoo.cyou
+  port: 443
+  type: vmess
+  uuid: db5d1aa3-908b-44d1-be0a-4e6a8d4e4cda
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /go
+- name: 美国 157
+  server: emby.metalink.cf
+  port: 8096
+  type: vmess
+  uuid: b8f9b514-4835-493b-e9a0-c135bbeb764b
+  alterId: 0
+  cipher: auto
+  network: tcp
+  skip-cert-verify: true
+  ws-path: ''
+- name: 美国 158
+  server: sg01.henet.cyou
+  port: 20000
+  type: vmess
+  uuid: 8ee6fe7e-3105-40aa-9c3e-e2c7465d889c
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /live
+- name: 美国 159
+  server: 107.173.250.129
+  port: 42713
+  type: vmess
+  uuid: 4012d932-93fe-4828-dcc9-331c871490c6
+  alterId: 0
+  cipher: auto
+  network: tcp
+  skip-cert-verify: true
+  ws-path: ''
+- name: 美国 160
+  server: 51.137.133.181
+  port: 13828
+  type: vmess
+  uuid: 2b5ee2ed-ddaa-4f13-a86c-ee47acf26a0e
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /dgfgdf
+- name: 美国 161
+  server: 20.70.19.80
+  port: 443
+  type: vmess
+  uuid: 67fbbdac-99e8-405b-8883-26953a2c8fe3
+  alterId: 0
+  cipher: auto
+  network: grpc
+  skip-cert-verify: true
+  ws-path: b0a7426a
+  tls: true
+- name: 美国 162
+  server: janpanbpjcyos.loseyourip.com
+  port: 80
+  type: vmess
+  uuid: dcec9778-3e07-4800-824e-5bccb04bc2b8
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /images
+- name: 美国 163
+  server: hk4.zingfast.vn
+  port: 80
+  type: vmess
+  uuid: b8a87016-f9f9-456c-b1af-77a9bb96e6e5
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /kvw0870h/
+- name: 美国 164
+  server: jp04-vm0.entry.rwesdhytjuftyhdafsdgfrh.club
+  port: 446
+  type: vmess
+  uuid: c498879d-8a73-3baf-a4f4-a0f38b75949c
+  alterId: 1
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: ''
+- name: 美国 165
+  server: 152.70.254.73
+  port: 443
+  type: vmess
+  uuid: 5c20f43f-afe2-4624-825c-d08abcfaf652
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /ba873aa/
+- name: 美国 166
+  server: 192.3.124.36
+  port: 29774
+  type: vmess
+  uuid: c7f8e9ff-82a6-49af-c772-ccf5b9092825
+  alterId: 0
+  cipher: auto
+  network: tcp
+  skip-cert-verify: true
+  ws-path: /b7b1f689-f82e-4ce4-97e7-8a8997370e44-vmess
+- name: 美国 167
+  server: 150.230.41.9
+  port: 23292
+  type: vmess
+  uuid: 956c6c2f-bf54-4b87-fafd-4b767ca12750
+  alterId: 0
+  cipher: auto
+  network: tcp
+  skip-cert-verify: true
+  ws-path: /tDZcCqc
+- name: 美国 168
+  server: 158.101.19.172
+  port: 10910
+  type: vmess
+  uuid: 241645f5-3190-429b-b513-5265a242dfe1
+  alterId: 0
+  cipher: auto
+  network: tcp
+  skip-cert-verify: true
+  ws-path: /
+- name: 美国 169
+  server: 54.208.71.54
+  port: 28987
+  type: vmess
+  uuid: e18937f5-dfa8-4b20-db12-b588cff58d54
+  alterId: 0
+  cipher: auto
+  network: tcp
+  skip-cert-verify: true
+  ws-path: /b7b1f689-f82e-4ce4-97e7-8a8997370e44-vmess
+- name: 美国 170
+  server: us02.gogogoo.cyou
+  port: 443
+  type: vmess
+  uuid: db5d1aa3-908b-44d1-be0a-4e6a8d4e4cda
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /go
+- name: 美国 171
+  server: 104.16.199.1
+  port: 443
+  type: vmess
+  uuid: 45202b35-eae3-4e34-84af-b42060fb9187
+  alterId: 0
+  cipher: auto
+  network: ws
+  skip-cert-verify: true
+  ws-path: /fqlovws
