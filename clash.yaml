@@ -259,14 +259,14 @@ proxy-groups:
       - OCXYNODE
       - DIRECT
       
-  - name: SELECTED
+  - name: SELECT
     type: select
-    proxies:
-      - FREEFQ
-      - FREENODE
-      - OAXYNODE
-      - OBXYNODE
-      - OCXYNODE
+    use:
+      - freefq
+      - freenode
+      - oaxynode
+      - obxynode
+      - ocxynode
       - DIRECT
       
   - name: FREEFQ
