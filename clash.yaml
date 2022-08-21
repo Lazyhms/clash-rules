@@ -267,7 +267,6 @@ proxy-groups:
       - oaxynode
       - obxynode
       - ocxynode
-      - DIRECT
       
   - name: FREEFQ
     type: url-test
