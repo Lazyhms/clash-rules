@@ -259,9 +259,9 @@ proxy-groups:
       - OCXYNODE
       - DIRECT
       
-  - name: SELECT
+  - name: SELECTED
     type: select
-    use:
+    proxies:
       - FREEFQ
       - FREENODE
       - OAXYNODE
