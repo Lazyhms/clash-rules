@@ -259,6 +259,16 @@ proxy-groups:
       - OCXYNODE
       - DIRECT
       
+  - name: SELECT
+    type: select
+    use:
+      - FREEFQ
+      - FREENODE
+      - OAXYNODE
+      - OBXYNODE
+      - OCXYNODE
+      - DIRECT
+      
   - name: FREEFQ
     type: url-test
     interval: 300
