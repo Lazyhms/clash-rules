@@ -242,7 +242,6 @@ proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - FREEFQ
       - FREENODE
       - OAXYNODE
       - OBXYNODE
