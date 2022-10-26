@@ -208,16 +208,6 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
   
-  freefq:
-    type: http
-    path: ./proxies/freefq.yaml
-    url: https://raw.iqiq.io/Lazyhms/clash-rules/release/freefq.yaml
-    interval: 86400
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  
   oaxynode:
     type: http
     path: ./proxies/oaxynode.yaml
@@ -262,20 +252,11 @@ proxy-groups:
   - name: SELECT
     type: select
     use:
-      - freefq
       - freenode
       - oaxynode
       - obxynode
       - ocxynode
-      
-  - name: FREEFQ
-    type: url-test
-    interval: 300
-    tolerance: 50
-    url: http://www.gstatic.com/generate_204
-    use:
-      - freefq
-
+ 
   - name: FREENODE
     type: url-test
     interval: 300
