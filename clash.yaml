@@ -217,16 +217,6 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-
-  obxynode:
-    type: http
-    path: ./proxies/obxynode.yaml
-    url: https://raw.iqiq.io/Lazyhms/clash-rules/release/obxynode.yaml
-    interval: 86400
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
       
   ocxynode:
     type: http
@@ -244,7 +234,6 @@ proxy-groups:
     proxies:
       - FREENODE
       - OAXYNODE
-      - OBXYNODE
       - OCXYNODE
       - DIRECT
       
@@ -253,7 +242,6 @@ proxy-groups:
     use:
       - freenode
       - oaxynode
-      - obxynode
       - ocxynode
  
   - name: FREENODE
@@ -271,14 +259,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     use:
       - oaxynode
-
-  - name: OBXYNODE
-    type: url-test
-    interval: 300
-    tolerance: 50
-    url: http://www.gstatic.com/generate_204
-    use:
-      - obxynode
 
   - name: OCXYNODE
     type: url-test
