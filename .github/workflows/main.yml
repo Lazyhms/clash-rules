@@ -12,15 +12,7 @@ jobs:
           echo "RELEASE_NAME=Released on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
           echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
         shell: bash
-
-      - name: Download python3 file and run
-        run: | 
-          curl https://raw.githubusercontent.com/Lazyhms/clash-rules/main/v2ray.py > v2ray.py
-          
-          python3 v2ray.py
-          
-          if [ -s v2ray.py ]; then rm -f v2ray.py; fi
-          
+  
       - name: Generate folder and files
         run: |
           
@@ -29,7 +21,6 @@ jobs:
             ["oaxynode"]="https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml"
             ["obxynode"]="https://raw.githubusercontent.com/alanbobs999/TopFreeProxies/master/Eternity.yml"
             ["ocxynode"]="https://raw.githubusercontent.com/aiboboxx/clashfree/main/clash.yml"
-            # ["greenfish"]="https://raw.gitfast.tk/GreenFishStudio/GreenFish/master/Subscription/Clash/GreenFishYYDS"
           )
           
           for key in ${!source[@]};do
