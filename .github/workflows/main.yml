@@ -17,7 +17,8 @@ jobs:
         run: |
           
           declare -A source=(
-            ["freenode"]="https://raw.githubusercontent.com/oslook/clash-freenode/main/clash.yaml"
+          # ["freenode"]="https://raw.githubusercontent.com/oslook/clash-freenode/main/clash.yaml"
+            ["freenode"]="https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
             ["oaxynode"]="https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml"
             ["ocxynode"]="https://raw.githubusercontent.com/aiboboxx/clashfree/main/clash.yml"
           )
