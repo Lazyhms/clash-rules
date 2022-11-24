@@ -20,7 +20,7 @@ jobs:
           # ["freenode"]="https://raw.githubusercontent.com/oslook/clash-freenode/main/clash.yaml"
             ["freenode"]="https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
           # ["oaxynode"]="https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml"
-            ["oaxynode"]="https://raw.githubusercontent.com/adiwzx/freenode/main/adispeed.yml"
+            ["oaxynode"]="https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml"
             ["ocxynode"]="https://raw.githubusercontent.com/aiboboxx/clashfree/main/clash.yml"
           )
           
