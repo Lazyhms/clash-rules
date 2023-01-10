@@ -236,13 +236,6 @@ proxy-groups:
       - OAXYNODE
       - OCXYNODE
       - DIRECT
-      
-  - name: SELECT
-    type: select
-    use:
-      - freenode
-      - oaxynode
-      - ocxynode
  
   - name: FREENODE
     type: url-test
