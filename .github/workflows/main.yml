@@ -22,6 +22,7 @@ jobs:
             ["obxynode"]="https://raw.githubusercontent.com/oslook/clash-freenode/main/clash.yaml"
             ["ocxynode"]="https://raw.githubusercontent.com/aiboboxx/clashfree/main/clash.yml"
             ["odxynode"]="https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml"
+            ["oexynode"]="https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml"
           )
           
           for key in ${!source[@]};do
