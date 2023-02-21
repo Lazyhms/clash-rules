@@ -17,11 +17,11 @@ jobs:
         run: |
           
           declare -A source=(
-          # ["freenode"]="https://raw.githubusercontent.com/oslook/clash-freenode/main/clash.yaml"
             ["freenode"]="https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
-          # ["oaxynode"]="https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml"
-            ["oaxynode"]="https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml"
+            ["oaxynode"]="https://cdn.jsdelivr.net/gh/zyzmzyz/free-nodes@master/Clash.yml"
+            ["obxynode"]="https://raw.githubusercontent.com/oslook/clash-freenode/main/clash.yaml"
             ["ocxynode"]="https://raw.githubusercontent.com/aiboboxx/clashfree/main/clash.yml"
+            ["odxynode"]="https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml"
           )
           
           for key in ${!source[@]};do
