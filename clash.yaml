@@ -196,71 +196,83 @@ tun:
     - 198.18.0.2:53
   auto-route: true
   auto-detect-interface: true
-     
+
+proxy-providers-defalut: &proxy-providers-defalut
+  type: http
+  interval: 86400
+  health-check:
+    enable: true
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
 proxy-providers:
   freenode:
-    type: http
+    <<: *proxy-providers-defalut
     path: ./proxies/freenode.yaml
     url: https://raw.iqiq.io/Lazyhms/clash-rules/release/freenode.yaml
-    interval: 86400
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
   
   oaxynode:
-    type: http
+    <<: *proxy-providers-defalut
     path: ./proxies/oaxynode.yaml
     url: https://raw.iqiq.io/Lazyhms/clash-rules/release/oaxynode.yaml
-    interval: 86400
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
       
+  obxynode:
+    <<: *proxy-providers-defalut
+    path: ./proxies/obxynode.yaml
+    url: https://raw.iqiq.io/Lazyhms/clash-rules/release/obxynode.yaml
+
   ocxynode:
-    type: http
+    <<: *proxy-providers-defalut
     path: ./proxies/ocxynode.yaml
     url: https://raw.iqiq.io/Lazyhms/clash-rules/release/ocxynode.yaml
-    interval: 86400
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-      
+
+  odxynode:
+    <<: *proxy-providers-defalut
+    path: ./proxies/odxynode.yaml
+    url: https://raw.iqiq.io/Lazyhms/clash-rules/release/odxynode.yaml
+
+proxy-groups-defalut: &proxy-groups-defalut
+  type: url-test
+  interval: 300
+  tolerance: 50
+  url: http://www.gstatic.com/generate_204
+
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
       - FREENODE
       - OAXYNODE
+      - OBXYNODE
       - OCXYNODE
+      - ODXYNODE
       - DIRECT
  
   - name: FREENODE
-    type: url-test
-    interval: 300
-    tolerance: 50
-    url: http://www.gstatic.com/generate_204
+    <<: *proxy-groups-defalut
     use:
       - freenode
   
   - name: OAXYNODE
-    type: url-test
-    interval: 300
-    tolerance: 50
-    url: http://www.gstatic.com/generate_204
+    <<: *proxy-groups-defalut
     use:
       - oaxynode
 
+  - name: OBXYNODE
+    <<: *proxy-groups-defalut
+    use:
+      - obxynode
+
   - name: OCXYNODE
-    type: url-test
-    interval: 300
-    tolerance: 50
-    url: http://www.gstatic.com/generate_204
+    <<: *proxy-groups-defalut
     use:
       - ocxynode
-      
+
+  - name: ODXYNODE
+    <<: *proxy-groups-defalut
+    use:
+      - odxynode
+     
 rule-providers:
   reject:
     type: http
