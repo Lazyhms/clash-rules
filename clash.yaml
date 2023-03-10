@@ -211,11 +211,6 @@ proxy-providers:
     path: ./proxies/freenode.yaml
     url: https://raw.iqiq.io/Lazyhms/clash-rules/release/freenode.yaml
   
-  oaxynode:
-    <<: *proxy-providers-defalut
-    path: ./proxies/oaxynode.yaml
-    url: https://raw.iqiq.io/Lazyhms/clash-rules/release/oaxynode.yaml
-  
   ocxynode:
     <<: *proxy-providers-defalut
     path: ./proxies/ocxynode.yaml
@@ -237,7 +232,6 @@ proxy-groups:
     type: select
     proxies:
       - FREENODE
-      - OAXYNODE
       - OCXYNODE
       - ODXYNODE
       - DIRECT
@@ -246,11 +240,6 @@ proxy-groups:
     <<: *proxy-groups-defalut
     use:
       - freenode
-      
-  - name: OAXYNODE
-    <<: *proxy-groups-defalut
-    use:
-      - oaxynode
       
   - name: OCXYNODE
     <<: *proxy-groups-defalut
