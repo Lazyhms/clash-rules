@@ -237,7 +237,6 @@ proxy-groups:
     type: select
     proxies:
       - FREENODE
-      - OAXYNODE
       - OBXYNODE
       - OCXYNODE
       - ODXYNODE
