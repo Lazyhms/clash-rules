@@ -18,6 +18,8 @@ jobs:
           
           declare -A source=(
             ["freenode"]="https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
+            ["oaxynode"]="https://raw.githubusercontent.com/vveg26/get_proxy/main/dist/clash.config.yaml"
+            ["ocxynode"]="https://raw.githubusercontent.com/aiboboxx/clashfree/main/clash.yml"
             ["odxynode"]="https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml"
             ["oexynode"]="https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml"
           )
