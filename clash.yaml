@@ -308,13 +308,6 @@ rule-providers:
     path: ./ruleset/gfw.yaml
     interval: 86400
 
-  greatfire:
-    type: http
-    behavior: domain
-    url: "https://raw.iqiq.io/Loyalsoldier/clash-rules/release/greatfire.txt"
-    path: ./ruleset/greatfire.yaml
-    interval: 86400
-
   tld-not-cn:
     type: http
     behavior: domain
@@ -366,7 +359,6 @@ rules:
   - RULE-SET,lancidr,DIRECT,no-resolve
   - RULE-SET,cncidr,DIRECT,no-resolve
   - RULE-SET,telegramcidr,PROXY
-  - GEOIP,,DIRECT,no-resolve
   - GEOIP,LAN,DIRECT,no-resolve
   - GEOIP,CN,DIRECT,no-resolve
   - MATCH,PROXY
