@@ -348,7 +348,7 @@ rules:
   - DOMAIN,local.adguard.org,DIRECT,no-resolve
   - DOMAIN,clash.razord.top,DIRECT,no-resolve
   - DOMAIN,yacd.haishan.me,DIRECT,no-resolve
-  - DOMAIN-KEYWORD,google,PROXY
+#   - DOMAIN-KEYWORD,google,PROXY
   - RULE-SET,private,DIRECT,no-resolve
   - RULE-SET,reject,REJECT,no-resolve
   - RULE-SET,icloud,DIRECT,no-resolve
