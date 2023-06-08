@@ -232,7 +232,7 @@ proxy-groups:
     type: select
     proxies:
       - FREENODE
-      - OCXYNODE
+      - OAXYNODE
       - ODXYNODE
       - DIRECT
  
@@ -241,7 +241,7 @@ proxy-groups:
     use:
       - freenode
       
-  - name: OCXYNODE
+  - name: OAXYNODE
     <<: *proxy-groups-defalut
     use:
       - oaxynode
