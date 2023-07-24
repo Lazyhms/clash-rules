@@ -215,16 +215,16 @@ proxy-providers:
     <<: *proxy-providers-defalut
     path: ./proxies/oaxynode.yaml
     url: https://raw.fastgit.ixmu.net/Lazyhms/clash-rules/release/oaxynode.yaml
- 
-  ocxynode:
-    <<: *proxy-providers-defalut
-    path: ./proxies/ocxynode.yaml
-    url: https://raw.fastgit.ixmu.net/Lazyhms/clash-rules/release/ocxynode.yaml
 
   odxynode:
     <<: *proxy-providers-defalut
     path: ./proxies/odxynode.yaml
     url: https://raw.fastgit.ixmu.net/Lazyhms/clash-rules/release/odxynode.yaml
+ 
+  oexynode:
+    <<: *proxy-providers-defalut
+    path: ./proxies/ocxynode.yaml
+    url: https://raw.fastgit.ixmu.net/Lazyhms/clash-rules/release/oexynode.yaml
 
 proxy-groups-defalut: &proxy-groups-defalut
   type: url-test
@@ -238,8 +238,8 @@ proxy-groups:
     proxies:
       - FREENODE
       - OAXYNODE      
-      - OCXYNODE
       - ODXYNODE
+      - OEXYNODE
       - DIRECT
  
   - name: FREENODE
@@ -252,15 +252,15 @@ proxy-groups:
     use:
       - oaxynode
       
-  - name: OCXYNODE
-    <<: *proxy-groups-defalut
-    use:
-      - ocxynode
-
   - name: ODXYNODE
     <<: *proxy-groups-defalut
     use:
       - odxynode
+
+  - name: OEXYNODE
+    <<: *proxy-groups-defalut
+    use:
+      - oexynode
      
 rule-providers:
   reject:
