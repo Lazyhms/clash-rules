@@ -209,22 +209,22 @@ proxy-providers:
   freenode:
     <<: *proxy-providers-defalut
     path: ./proxies/freenode.yaml
-    url: https://cdn.staticaly.com/gh/Lazyhms/clash-rules/release/freenode.yaml
+    url: https://cdn.jsdelivr.net/gh/Lazyhms/clash-rules/release/freenode.yaml
    
   oaxynode:
     <<: *proxy-providers-defalut
     path: ./proxies/oaxynode.yaml
-    url: https://cdn.staticaly.com/gh/Lazyhms/clash-rules/release/oaxynode.yaml
+    url: https://cdn.jsdelivr.net/gh/Lazyhms/clash-rules/release/oaxynode.yaml
 
   odxynode:
     <<: *proxy-providers-defalut
     path: ./proxies/odxynode.yaml
-    url: https://cdn.staticaly.com/gh/Lazyhms/clash-rules/release/odxynode.yaml
+    url: https://cdn.jsdelivr.net/gh/Lazyhms/clash-rules/release/odxynode.yaml
  
   oexynode:
     <<: *proxy-providers-defalut
     path: ./proxies/ocxynode.yaml
-    url: https://cdn.staticaly.com/gh/Lazyhms/clash-rules/release/oexynode.yaml
+    url: https://cdn.jsdelivr.net/gh/Lazyhms/clash-rules/release/oexynode.yaml
 
 proxy-groups-defalut: &proxy-groups-defalut
   type: url-test
